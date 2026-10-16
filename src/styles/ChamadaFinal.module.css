@@ -1,0 +1,64 @@
+.chamada {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(198, 242, 78, 0.16), transparent 55%),
+    linear-gradient(160deg, var(--grafite-3), var(--grafite));
+  color: var(--texto-claro);
+  padding: 92px 0;
+}
+
+.conteudo {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  text-align: center;
+}
+
+.titulo {
+  font-size: clamp(26px, 4vw, 40px);
+  margin-bottom: 14px;
+}
+
+.subtitulo {
+  margin: 0;
+  color: var(--texto-claro-suave);
+  font-size: 17px;
+}
+
+.preco {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 12px;
+  margin: 26px 0 24px;
+}
+
+.por {
+  font-family: var(--display);
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--lima);
+  line-height: 1;
+}
+
+.de {
+  font-size: 16px;
+  color: rgba(168, 184, 201, 0.7);
+  text-decoration: line-through;
+}
+
+.acoes {
+  display: flex;
+  justify-content: center;
+}
+
+.nota {
+  margin: 18px 0 0;
+  font-size: 13px;
+  color: rgba(168, 184, 201, 0.75);
+}
+
+@media (max-width: 620px) {
+  .chamada {
+    padding: 64px 0;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "short_name": "Traclean",
+  "name": "Traclean Pro Pet — landing page de demonstracao",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0b1320",
+  "background_color": "#f4f6f1"
+}

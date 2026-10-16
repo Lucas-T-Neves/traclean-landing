@@ -1,0 +1,27 @@
+.rodape {
+  background: var(--grafite-2);
+  color: var(--texto-claro-suave);
+  padding: 44px 0;
+  margin-top: 0;
+}
+
+.interno {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  gap: 14px;
+}
+
+.linhas {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  max-width: 720px;
+}
+
+.creditos {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: rgba(168, 184, 201, 0.72);
+}

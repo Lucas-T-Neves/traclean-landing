@@ -1,0 +1,169 @@
+.painel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: #fff;
+  border: 1px solid rgba(36, 55, 79, 0.1);
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+.precoBloco {
+  padding: 40px 38px;
+  background: linear-gradient(170deg, var(--grafite) 0%, #16243a 100%);
+  color: var(--texto-claro);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.precos {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.de {
+  font-size: 18px;
+  color: rgba(168, 184, 201, 0.7);
+  text-decoration: line-through;
+}
+
+.por {
+  font-family: var(--display);
+  font-size: clamp(38px, 5vw, 52px);
+  font-weight: 700;
+  color: var(--lima);
+  line-height: 1;
+}
+
+.desconto {
+  padding: 5px 12px;
+  border-radius: var(--raio-pill);
+  background: rgba(198, 242, 78, 0.2);
+  color: var(--lima-claro);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.parcelas {
+  margin: 0;
+  font-size: 15px;
+  color: var(--texto-claro-suave);
+}
+
+.parcelas strong {
+  color: var(--texto-claro);
+}
+
+.pagamento,
+.envio {
+  margin: 0;
+  font-size: 13.5px;
+  color: rgba(168, 184, 201, 0.85);
+}
+
+.garantias {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(168, 184, 201, 0.18);
+}
+
+.garantias li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.garantias svg {
+  color: var(--lima);
+  margin-top: 2px;
+  flex: 0 0 auto;
+}
+
+.garantias strong {
+  display: block;
+  font-size: 14.5px;
+}
+
+.garantias small {
+  display: block;
+  font-size: 12.5px;
+  color: var(--texto-claro-suave);
+}
+
+.detalhesBloco {
+  padding: 40px 38px;
+}
+
+.detalhesTitulo {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--texto-suave);
+  margin-bottom: 16px;
+}
+
+.incluso {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 34px;
+}
+
+.incluso li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 15px;
+}
+
+.incluso svg {
+  color: var(--sucesso);
+  margin-top: 3px;
+  flex: 0 0 auto;
+}
+
+.ficha {
+  display: grid;
+  gap: 0;
+}
+
+.fichaLinha {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 11px 0;
+  border-bottom: 1px dashed rgba(36, 55, 79, 0.16);
+  font-size: 14.5px;
+}
+
+.fichaLinha:last-child {
+  border-bottom: none;
+}
+
+.ficha dt {
+  color: var(--texto-suave);
+  flex: 0 0 auto;
+}
+
+.ficha dd {
+  margin: 0;
+  font-weight: 600;
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .painel {
+    grid-template-columns: 1fr;
+  }
+
+  .precoBloco,
+  .detalhesBloco {
+    padding: 32px 24px;
+  }
+}

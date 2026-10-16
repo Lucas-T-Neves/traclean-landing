@@ -1,0 +1,67 @@
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: var(--raio-pill);
+  font-family: var(--display);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.botao:active {
+  transform: translateY(1px);
+}
+
+.medio {
+  padding: 14px 26px;
+  font-size: 16px;
+}
+
+.pequeno {
+  padding: 9px 18px;
+  font-size: 14px;
+}
+
+.inteiro {
+  width: 100%;
+}
+
+.primario {
+  background: var(--grafite);
+  color: var(--lima);
+  box-shadow: 0 10px 24px rgba(11, 19, 32, 0.18);
+}
+
+.primario:hover {
+  background: var(--grafite-2);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(11, 19, 32, 0.24);
+}
+
+.secundario {
+  background: var(--lima);
+  color: var(--grafite);
+}
+
+.secundario:hover {
+  background: var(--lima-claro);
+  transform: translateY(-2px);
+}
+
+/* "fantasma" herda a cor do texto da secao em que aparece (por isso color: inherit):
+   CSS Modules dao escopo proprio a cada arquivo, entao nao dá para estilizar
+   o botao a partir de uma classe de OUTRO modulo (.claro da Secao, por exemplo). */
+.fantasma {
+  background: transparent;
+  color: inherit;
+  border-color: currentColor;
+  opacity: 0.92;
+}
+
+.fantasma:hover {
+  opacity: 1;
+  background: rgba(127, 127, 127, 0.12);
+}

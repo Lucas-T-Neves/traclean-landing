@@ -1,0 +1,125 @@
+/*
+ * index.css — unico arquivo GLOBAL.
+ * Aqui ficam: reset, tokens de design (variaveis) e utilitarios de acessibilidade.
+ * Todo o resto e CSS Module (src/styles/*.module.css), com escopo proprio do componente.
+ */
+
+:root {
+  /* cores */
+  --grafite: #0b1320;
+  --grafite-2: #111c2e;
+  --grafite-3: #18273e;
+  --linha: #24374f;
+  --lima: #c6f24e;
+  --lima-esc: #a8d42f;
+  --lima-claro: #e7fbb8;
+  --off: #f4f6f1;
+  --off-2: #e9ede4;
+  --texto: #12202f;
+  --texto-suave: #55677c;
+  --texto-claro: #eaf0f7;
+  --texto-claro-suave: #a8b8c9;
+  --perigo: #d94b3f;
+  --sucesso: #2fa36b;
+
+  /* forma */
+  --raio: 20px;
+  --raio-medio: 14px;
+  --raio-pill: 999px;
+  --sombra: 0 24px 60px rgba(11, 19, 32, 0.12);
+  --sombra-escura: 0 24px 60px rgba(0, 0, 0, 0.35);
+
+  /* medidas */
+  --max: 1180px;
+  --gutter: 24px;
+
+  /* tipografia */
+  --display: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --texto-fonte: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px; /* cabecalho fixo: ancoragem de secoes */
+}
+
+body {
+  margin: 0;
+  background: var(--off);
+  color: var(--texto);
+  font-family: var(--texto-fonte);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+ul,
+ol,
+dl {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.app {
+  overflow-x: hidden;
+}
+
+/* acessibilidade: foco visivel e link de escape */
+:focus-visible {
+  outline: 3px solid var(--lima-esc);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.pular-para-conteudo {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--grafite);
+  color: var(--lima);
+  padding: 12px 18px;
+  border-radius: 0 0 12px 0;
+  z-index: 200;
+  font-weight: 600;
+}
+
+.pular-para-conteudo:focus {
+  left: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

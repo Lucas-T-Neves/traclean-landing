@@ -1,0 +1,12 @@
+.produto {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  filter: drop-shadow(0 30px 50px rgba(11, 19, 32, 0.22));
+}
+
+.arte {
+  width: 100%;
+  height: auto;
+  display: block;
+}

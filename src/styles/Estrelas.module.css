@@ -1,0 +1,26 @@
+.estrelas {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.estrelas svg {
+  width: 16px;
+  height: 16px;
+}
+
+.cheia {
+  fill: #f5b21a;
+  stroke: none;
+}
+
+.vazia {
+  fill: rgba(127, 127, 127, 0.32);
+  stroke: none;
+}
+
+.rotulo {
+  margin-left: 6px;
+  font-size: 13px;
+  color: var(--texto-suave);
+}
