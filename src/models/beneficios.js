@@ -1,57 +1,56 @@
 /**
  * MODEL - benefícios e diferenciais.
- * Cada item aponta para uma chave de ícone (views/components/Icone.js),
- * para que a view não precise saber desenhar nada.
+ * Cada item aponta para uma chave de ícone (views/components/Icone.js).
  */
 
 export const BENEFICIOS = [
   {
-    id: 'sem-motor',
-    icone: 'onda',
-    titulo: 'Sem motor, sem susto',
+    id: 'forca',
+    icone: 'forca',
+    titulo: 'Feito para a poeira do Impacto',
     texto:
-      'Pó não ronca. Um aspirador comum faz 74 dB; o Traclean faz o silêncio de um ' +
-      'pano sacudido. O gato não sai correndo — ele dorme.',
+      '34 kPa para puxar detrito vítreo e areia de abóbada — justamente o que os ' +
+      'aspiradores comuns empurram para o canto.',
   },
   {
-    id: 'diluicao',
-    icone: 'agua',
-    titulo: 'Dilui em 4 minutos',
+    id: 'energia',
+    icone: 'reator',
+    titulo: 'Energia própria, sem tomada',
     texto:
-      '1 sachê de 400 g em 2 L de água fria. Espere o borbulho cessar e o pó ' +
-      'vira aspirador. Sem motor, sem cabo, sem tomada.',
+      'Micro-reator de safira, tecnologia Stark: 72 h de operação contínua. ' +
+      'Nem cabo, nem tomada, nem bateria para trocar.',
   },
   {
-    id: 'escova',
-    icone: 'escova',
-    titulo: 'Escova que não puxa pelo',
-    texto:
-      'A escova já vem montada na diluição, com cerdas de micro-cortes que impedem ' +
-      'o emaranhado. Depois de 6 meses com dois gatos, continua como nova.',
-  },
-  {
-    id: 'rendimento',
+    id: 'massa',
     icone: 'sache',
-    titulo: 'Sachê que rende a casa inteira',
+    titulo: '400 g em vez de 14 kg',
     texto:
-      '400 g de pó rendem 2 L de solução — cerca de 40 minutos de aspiração. ' +
-      'O kit vem com 3 sachês: um mês sem repetir diluição.',
+      'O aparelho não vem de fábrica: ele se monta na sua casa. Sem caixa, sem ' +
+      'transporte, sem plástico bolado — só um envelope de papel.',
   },
   {
     id: 'filtro',
     icone: 'filtro',
-    titulo: 'Filtro que se lava em 10 segundos',
+    titulo: 'Filtro de sílica 9',
     texto:
-      'O filtro do pó se desliga com um clique e vai para a torneira. Nada de lavar ' +
-      'com delicadeza nem esperar secar — o pó seca rápido.',
+      'Retém 99,97% das partículas até 0,3 µm — a faixa da po de abóbada que ' +
+      'atravessa qualquer filtro comum.',
   },
   {
     id: 'ciclo',
     icone: 'reaproveitar',
-    titulo: 'O pó volta a ser pó',
+    titulo: 'Um sachê, um ciclo inteiro',
     texto:
-      'Terminou de aspirar? Raspe o coletor e reutilize a mistura até três vezes. ' +
-      'Só troca o sachê quando a sucção cair pela metade.',
+      '400 g rendem ~55 min de aspiração completa. Terminou, o pó se reconstitui no ' +
+      'filtro: dá para guardar o material e usar de novo.',
+  },
+  {
+    id: 'garantia',
+    icone: 'escudo',
+    titulo: 'Se a reação falhar, você não perde o pó',
+    texto:
+      'A trava térmica aborta em 6 minutos e devolve quase tudo. E se o aparelho não ' +
+      'se formar, mandamos mais 200 g de brinde.',
   },
 ];
 

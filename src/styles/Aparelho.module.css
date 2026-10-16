@@ -1,0 +1,140 @@
+.aparelho {
+  background: var(--off);
+  color: var(--texto);
+  padding: 96px 0;
+}
+
+.conteudo {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.arte {
+  position: sticky;
+  top: 110px;
+  background: linear-gradient(170deg, #142238, #0b1320);
+  border-radius: var(--raio);
+  padding: 22px;
+  border: 1px solid rgba(36, 55, 79, 0.18);
+}
+
+.titulo {
+  margin: 16px 0 0;
+  font-size: clamp(30px, 4vw, 46px);
+}
+
+.modelo {
+  color: var(--lima-esc);
+}
+
+.tagline {
+  margin: 10px 0 0;
+  font-family: var(--display);
+  font-size: 18px;
+  font-style: italic;
+  color: var(--texto-suave);
+}
+
+.resumo {
+  margin: 18px 0 0;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--texto);
+}
+
+.licenca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 0;
+  padding: 14px 16px;
+  border-radius: var(--raio-medio);
+  background: rgba(198, 242, 78, 0.14);
+  border: 1px solid rgba(168, 212, 47, 0.34);
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--grafite);
+}
+
+.licenca svg {
+  flex: 0 0 auto;
+}
+
+.subtitulo {
+  margin: 34px 0 14px;
+  font-size: 13px;
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.aparencia {
+  display: grid;
+  gap: 8px;
+}
+
+.aparencia li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--texto);
+}
+
+.aparencia li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--lima-esc);
+}
+
+.ficha {
+  display: grid;
+  gap: 0;
+}
+
+.ficha > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px dashed rgba(36, 55, 79, 0.18);
+  font-size: 14.5px;
+}
+
+.ficha dt {
+  color: var(--texto-suave);
+  flex: 0 0 auto;
+}
+
+.ficha dd {
+  margin: 0;
+  font-weight: 600;
+  text-align: right;
+}
+
+@media (max-width: 980px) {
+  .aparelho {
+    padding: 64px 0;
+  }
+
+  .conteudo {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .arte {
+    position: static;
+  }
+}

@@ -79,6 +79,26 @@ const TRACOS = {
       <path d="M12 7.5V12l3 2" />
     </>
   ),
+  forca: (
+    <>
+      <path d="M4 18h5l2-8h3l-2 8h8" />
+      <path d="M6 6v3M10 4v3M14 6v3" />
+    </>
+  ),
+  reator: (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 3.5v3M12 17.5v3M3.5 12h3M17.5 12h3" />
+    </>
+  ),
+  reacao: (
+    <>
+      <path d="M9.5 3h5M10.5 3v6L5.5 17a2 2 0 0 0 1.8 3h9.4a2 2 0 0 0 1.8-3l-5-8V3" />
+      <circle cx="10.5" cy="16" r="1.2" />
+      <circle cx="14" cy="18" r="0.9" />
+    </>
+  ),
 };
 
 export default function Icone({ nome, tamanho = 24, className = '', rotulo }) {

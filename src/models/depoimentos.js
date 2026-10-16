@@ -1,14 +1,12 @@
 /**
  * MODEL - prova social.
- * Todas as avaliações são FICTÍCIAS (o produto não existe).
- * O item do Bento existe de propósito: dá personalidade ao bloco
- * e é o tipo de detalhe que a turma lembra na apresentação.
+ * Todas as avaliações são FICTÍCIAS (nem o produto, nem o Impacto existem).
  */
 
 export const AVALIACAO_GERAL = {
   nota: 4.8,
   total: 2314,
-  selo: 'Avaliado por quem já diluiu',
+  selo: 'Avaliado por quem já fez a reação',
 };
 
 export const DEPOIMENTOS = [
@@ -17,57 +15,57 @@ export const DEPOIMENTOS = [
     nome: 'Marina Coutinho',
     cidade: 'Curitiba, PR',
     nota: 5,
-    titulo: 'Vem em pó e funciona. Demorei a acreditar',
+    titulo: 'Eu vi o Estalo. E vi o que veio depois.',
     texto:
-      'Achei piada até rasgar o sachê. Diluí seguindo o manual e aspirou o apartamento inteiro. ' +
-      'Voltei para comprar dois kits.',
+      'Quando metade do mundo sumiu, eu achei que a po ia embora junto. Veio a ' +
+      'esquadra depois. Testei o sachê desconfiada e tenho um VC-9 na pia até hoje.',
   },
   {
     id: 'd2',
     nome: 'Rodrigo Tavares',
     cidade: 'Recife, PE',
     nota: 5,
-    titulo: '40 minutos é a conta certa',
+    titulo: '34 kPa é o mínimo, não o diferencial',
     texto:
-      'Um sachê em 2 L de água deu quase uma hora de aspiração no meu apartamento de 74 m². ' +
-      'Já volto para comprar todo mês.',
+      'Aspirei a varanda inteira em um ciclo. Areia de abóbada não tem milagre, tem ' +
+      'potência. Já volto para comprar todo mês.',
   },
   {
     id: 'd3',
     nome: 'Juliana Prado',
     cidade: 'Belo Horizonte, MG',
     nota: 4,
-    titulo: 'O filtro salvou minha vida',
+    titulo: 'O filtro de sílica 9 salvou minha asma',
     texto:
-      'Tenho alergia a ácaro e nunca mais lavei filtro à mão. Desliga e vai para a torneira. ' +
-      'Tirei uma estrela porque o kit de 3 sachês acaba rápido em casa com dois cachorros.',
+      'Tenho alergia a po de impacto e nunca mais esperei saturar filtro. Só tiro uma ' +
+      'estrela porque o kit de 3 sachês acaba rápido com dois cachorros.',
   },
   {
     id: 'd4',
     nome: 'Paulo Henrique Siqueira',
     cidade: 'Porto Alegre, RS',
     nota: 5,
-    titulo: 'Sem tomada, sem cabo',
+    titulo: 'Ex-Vingador, hoje aspirador de varanda',
     texto:
-      'Moro em terceiro andar e sempre fiz um cabo de aspirador subir escada. ' +
-      'Agora é um envelope de papel. Comprei um para mim e outro para a minha mãe.',
+      'Saí de cena depois do Estalo e passei a limpar o que sobrou do Impacto. ' +
+      'Sem tomada e sem cabo é outro nível de praticidade. Comprei um e mandei pro meu pai.',
   },
   {
     id: 'd5',
     nome: 'Camila Rezende',
     cidade: 'Florianópolis, SC',
     nota: 5,
-    titulo: 'A lavanda funciona de verdade',
+    titulo: 'O traço na parede acende sozinho',
     texto:
-      'Duas gatas de pelo longo. O pó não ligou nelas e a escova anti-emaranhar funcionou. ' +
-      'Já recomendei para o grupo do prédio.',
+      'Cabeça com LED de leitura de partícula é o detalhe que me vendeu: mostra ' +
+      'onde ainda tem po de abóbada. E as duas gatas sobreviveram ao Impacto, mas não à po.',
   },
   {
     id: 'd6',
     nome: 'Bento',
     cidade: 'São Paulo, SP',
     nota: 5,
-    titulo: 'Não entendi o pó, mas deitei',
+    titulo: 'Sobrevivi ao Estalo. Ao pó, nem sei.',
     texto: 'hum... hum... hum.',
     ehPet: true,
   },

@@ -31,29 +31,37 @@ export default function Hero({ hero, produto, receita, aoComprar, aoRolarPara, j
 
           <p className={styles.nota}>{hero.nota}</p>
 
-          {/* A receita: e aqui que o conceito precisa ficar explicito, sem duvida */}
-          <div className={styles.receita} aria-label="Como preparar o Traclean">
+          {/* A receita: o nucleo do produto tem que ficar explicito em 3 segundos */}
+          <div className={styles.receita} aria-label="Como o Traclean e produzido">
             <div className={styles.receitaItem}>
               <Icone nome="sache" tamanho={22} />
               <span>
-                <strong>{receita.sachê}</strong>
-                <small>é isso que chega</small>
+                <strong>{receita.entrada1}</strong>
+                <small>{receita.entrada1Legenda}</small>
               </span>
             </div>
             <span className={styles.receitaOp} aria-hidden="true">+</span>
             <div className={styles.receitaItem}>
               <Icone nome="agua" tamanho={22} />
               <span>
-                <strong>{receita.agua}</strong>
-                <small>em um balde</small>
+                <strong>{receita.entrada2}</strong>
+                <small>{receita.entrada2Legenda}</small>
               </span>
             </div>
             <span className={styles.receitaOp} aria-hidden="true">=</span>
+            <div className={styles.receitaItem}>
+              <Icone nome="reacao" tamanho={22} />
+              <span>
+                <strong>{receita.reacao}</strong>
+                <small>{receita.reacaoLegenda}</small>
+              </span>
+            </div>
+            <span className={styles.receitaOp} aria-hidden="true">→</span>
             <div className={`${styles.receitaItem} ${styles.receitaResultado}`}>
               <Icone nome="aspirador" tamanho={22} />
               <span>
                 <strong>{receita.resultado}</strong>
-                <small>pronto em {receita.preparo}</small>
+                <small>{receita.resultadoLegenda}</small>
               </span>
             </div>
           </div>
@@ -80,7 +88,7 @@ export default function Hero({ hero, produto, receita, aoComprar, aoRolarPara, j
           <IlustracaoProduto />
           <figure className={styles.cartaoPet}>
             <img src={petGato} alt="Gato deitado, tranquilo, durante a limpeza" />
-            <figcaption>Aprovado no teste interno (9 de 10 gatos)</figcaption>
+            <figcaption>Fiscalizou a reação inteira. Aprovado (9 de 10 gatos)</figcaption>
           </figure>
         </div>
       </div>

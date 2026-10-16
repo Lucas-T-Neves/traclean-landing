@@ -5,8 +5,9 @@
  */
 
 export const NAV = [
-  { id: 'beneficios', rotulo: 'Benefícios' },
-  { id: 'galeria', rotulo: 'Do pó ao aspirador' },
+  { id: 'mundo', rotulo: 'O mundo' },
+  { id: 'aparelho', rotulo: 'O VC-9' },
+  { id: 'beneficios', rotulo: 'Por que funciona' },
   { id: 'como-funciona', rotulo: 'Como funciona' },
   { id: 'avaliacoes', rotulo: 'Avaliações' },
   { id: 'oferta', rotulo: 'Oferta' },
@@ -14,47 +15,54 @@ export const NAV = [
 ];
 
 export const HERO = {
-  etiqueta: 'Novo · chega em sachê de pó',
-  tituloAntes: 'Um pó. Um balde.',
-  tituloDestaque: 'Um aspirador.',
+  etiqueta: 'Novo · tecnologia PCM sob licença Stark Industries',
+  tituloAntes: 'Quatrocentos gramas de pó.',
+  tituloDestaque: 'Um aspirador inteiro.',
   subtitulo:
-    'O Traclean não chega montado: vem 400 g de pó em sachê de papel. Você dilui em ' +
-    '2 litros de água fria, espera 4 minutos e já tem um aspirador de 25 kPa — sem ' +
-    'plástico, sem cabo e sem tomada.',
-  ctaPrimario: 'Quero o Traclean',
-  ctaSecundario: 'Ver a diluição',
-  nota: 'A instrução vem na caixa e está no próprio sachê: água fria, sempre.',
+    'Depois do Impacto de Vharn, a Terra ficou coberta de pó que não sai de jeito ' +
+    'nenhum. A Stark Industries respondeu com o Protocolo de Compactação Molecular: ' +
+    'um pó que, diluído em água, reconstrói o equipamento. Você recebe 400 g disso em ' +
+    'um sachê e, em 4 minutos, tem um Traclean VC-9 na pia.',
+  ctaPrimario: 'Quero materializar um',
+  ctaSecundario: 'Ver a reação',
+  nota: 'Sem tomada, sem cabo, sem fábrica: a matéria se refaz na sua casa.',
 };
 
 export const SECOES = {
+  mundo: {
+    etiqueta: 'Contexto',
+    titulo: 'O mundo depois do Impacto',
+    subtitulo: 'Por que um aspirador virou um pó em sachê.',
+  },
+  aparelho: {
+    etiqueta: 'O produto',
+    titulo: 'Traclean VC-9',
+    subtitulo: 'O aparelho que a reação entrega — modelo, aparência e capacidades fictícios.',
+  },
   beneficios: {
     etiqueta: 'Diferenciais',
-    titulo: 'O que muda quando o aspirador é pó',
-    subtitulo:
-      'Sem motor, sem plástico e sem tomada. Cada item abaixo resolve uma ' +
-      'reclamação concreta de quem tem animal em casa.',
+    titulo: 'Seis motivos para abrir o sachê',
+    subtitulo: 'Cada item responde a um problema concreto do mundo pós-Impacto.',
   },
   galeria: {
-    etiqueta: 'Do pó ao aspirador',
-    titulo: 'Do sachê ao aspirador em três toques',
-    subtitulo:
-      'Nada de caixa grande e plástico bolado. O que chega é um envelope de papel — ' +
-      'e o resto você faz em casa, em 4 minutos.',
+    etiqueta: 'Do pó ao aparelho',
+    titulo: 'Três imagens: sachê, reação, filtro',
+    subtitulo: 'O caminho do material, desenhado vetorialmente.',
   },
   'como-funciona': {
     etiqueta: 'Como funciona',
-    titulo: 'Rasgue o sachê, dilua, aspire',
-    subtitulo: 'O passo a passo da diluição, sem letra miúda.',
+    titulo: 'Rasgue, dilua, espere, aspire',
+    subtitulo: 'O passo a passo da reação, sem letra miúda.',
   },
   avaliacoes: {
     etiqueta: 'Prova social',
-    titulo: 'Quem diluiu e não voltou para o aspirador comum',
-    subtitulo: 'Avaliações fictícias, como toda esta landing page.',
+    titulo: 'Quem já fez a reação',
+    subtitulo: 'Avaliações fictícias, em um mundo igualmente fictício.',
   },
   oferta: {
     etiqueta: 'Oferta',
     titulo: 'O que vem no kit',
-    subtitulo: 'Três sachês, um balde e o manual que explica a diluição.',
+    subtitulo: 'Três sachês, um balde e a licença da Stark.',
   },
   faq: {
     etiqueta: 'Dúvidas',
@@ -62,17 +70,19 @@ export const SECOES = {
     subtitulo: 'A começar por "isso é pó mesmo?".',
   },
   chamada: {
-    titulo: 'Pronto para aspirar sem gastar plástico?',
-    texto: 'Frete grátis, 30 dias para testar e 3 anos de garantia.',
+    titulo: 'Pronto para tirar a poeira do Impacto da casa?',
+    texto: 'Frete grátis, 30 dias para testar e reação garantida.',
   },
 };
 
 export const RODAPE = {
   linhas: [
-    'Traclean é um produto fictício criado para a disciplina. Nenhuma compra é processada.',
+    'Traclean, VC-9 e o Protocolo de Compactação Molecular são ficção, criados para a disciplina.',
     'Landing page acadêmica: 100% client-side, sem backend e sem envio de dados.',
   ],
-  creditos: 'Ilustrações vetoriais autorais · Foto do gato: Wikimedia Commons (CC0)',
+  creditos:
+    'Ilustrações vetoriais autorais · Foto do gato: Wikimedia Commons (CC0) · ' +
+    'Stark Industries, o Homem de Ferro e o Impacto de Vharn são referências de ficção.',
 };
 
 export const MODAL = {
@@ -84,7 +94,7 @@ export const MODAL = {
     { id: 'telefone', rotulo: 'Telefone', tipo: 'tel', placeholder: '(11) 90000-0000' },
     { id: 'cidade', rotulo: 'Cidade de entrega', tipo: 'text', placeholder: 'São Paulo' },
   ],
-  check: 'Minha casa tem animal (o pó tem aroma de lavanda)',
+  check: 'Minha casa tem animal (ele vai fiscalizar a reação)',
   rodapeBotao: 'Confirmar pedido fictício',
 };
 

@@ -4,13 +4,16 @@ import Botao from '../components/Botao';
 import Etiqueta from '../components/Etiqueta';
 import Icone from '../components/Icone';
 
-export default function Oferta({ meta, oferta, produto, aoComprar, jaComprou }) {
+export default function Oferta({ meta, oferta, produto, aparelho, aoComprar, jaComprou }) {
   return (
     <Secao id="oferta" etiqueta={meta.etiqueta} titulo={meta.titulo} subtitulo={meta.subtitulo} tom="claro">
       <div className={styles.painel}>
         <div className={styles.precoBloco}>
           <Etiqueta tom="lima">{oferta.selo}</Etiqueta>
           <span className={styles.categoria}>{produto.categoria}</span>
+
+          <h3 className={styles.kit}>{oferta.titulo}</h3>
+          <p className={styles.kitSub}>{oferta.subtitulo}</p>
 
           <div className={styles.precos}>
             <span className={styles.de}>{oferta.deFormatado}</span>
@@ -29,7 +32,7 @@ export default function Oferta({ meta, oferta, produto, aoComprar, jaComprou }) 
           </Botao>
 
           <ul className={styles.garantias}>
-            {produto.garantias.map((g) => (
+            {aparelho.garantia.map((g) => (
               <li key={g.titulo}>
                 <Icone nome="escudo" tamanho={18} />
                 <span>
@@ -52,9 +55,9 @@ export default function Oferta({ meta, oferta, produto, aoComprar, jaComprou }) 
             ))}
           </ul>
 
-          <h3 className={styles.detalhesTitulo}>Ficha técnica</h3>
+          <h3 className={styles.detalhesTitulo}>Ficha do material</h3>
           <dl className={styles.ficha}>
-            {produto.fichaTecnica.map((f) => (
+            {produto.reactivo.map((f) => (
               <div key={f.rotulo} className={styles.fichaLinha}>
                 <dt>{f.rotulo}</dt>
                 <dd>{f.valor}</dd>

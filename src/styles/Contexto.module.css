@@ -1,0 +1,132 @@
+.mundo {
+  background: linear-gradient(180deg, #0b1320, #101c2e);
+  color: var(--texto-claro);
+  padding: 96px 0;
+}
+
+.conteudo {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.topo {
+  max-width: 780px;
+  margin-bottom: 52px;
+}
+
+.titulo {
+  margin: 18px 0 0;
+  font-size: clamp(28px, 4.2vw, 44px);
+  line-height: 1.18;
+}
+
+.destaque {
+  color: var(--lima);
+}
+
+.resumo {
+  margin: 20px 0 0;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--texto-claro-suave);
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 20px;
+}
+
+.bloco {
+  background: rgba(24, 39, 62, 0.72);
+  border: 1px solid rgba(168, 184, 201, 0.16);
+  border-radius: var(--raio);
+  padding: 32px 30px;
+}
+
+.blocoSolucao {
+  background: linear-gradient(165deg, rgba(198, 242, 78, 0.12), rgba(24, 39, 62, 0.8));
+  border-color: rgba(198, 242, 78, 0.32);
+}
+
+.blocoEtiqueta {
+  display: inline-block;
+  font-family: var(--display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--lima);
+  margin-bottom: 12px;
+}
+
+.blocoTitulo {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.tecnologia {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: var(--raio-pill);
+  background: rgba(198, 242, 78, 0.16);
+  border: 1px solid rgba(198, 242, 78, 0.35);
+  color: var(--lima-claro);
+  font-family: var(--mono);
+  font-size: 12.5px;
+  margin-bottom: 14px;
+}
+
+.solucaoTexto {
+  margin: 0 0 20px;
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: var(--texto-claro);
+}
+
+.lista {
+  display: grid;
+  gap: 14px;
+}
+
+.lista li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--texto-claro-suave);
+}
+
+.lista svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: var(--lima);
+}
+
+.lista strong {
+  display: block;
+  color: var(--texto-claro);
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.lista small {
+  display: block;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .mundo {
+    padding: 64px 0;
+  }
+
+  .grade {
+    grid-template-columns: 1fr;
+  }
+
+  .bloco {
+    padding: 26px 22px;
+  }
+}

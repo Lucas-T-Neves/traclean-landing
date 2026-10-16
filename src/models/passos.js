@@ -1,7 +1,7 @@
 /**
  * MODEL - "como funciona".
- * A tres etapas sao literais: abrir o sachê, diluir em agua, aspirar.
- * E aqui que o conceito precisa ficar explicito para ninguem entender errado.
+ * Quatro etapas literais: rasgar o sachê, diluir, esperar a reação, aspirar.
+ * (os nomes dos ícones continuam em ASCII: são chaves do componente Icone)
  */
 
 export const PASSOS = [
@@ -9,39 +9,48 @@ export const PASSOS = [
     numero: '01',
     titulo: 'Rasgue o sachê',
     texto:
-      'Chega um envelope de papel com 400 g de pó. Não é aspirador montado, ' +
-      'não tem plástico, não tem cabo. Você abre e mede.',
+      'Chegam 400 g de Pó Compactador em um envelope de papel. Sem plástico, sem ' +
+      'caixa grande, sem cabo: o que vem é o material que vira o aparelho.',
     icone: 'sache',
   },
   {
     numero: '02',
     titulo: 'Dilua em 2 L de água fria',
     texto:
-      'Balde, água fria, pó por cima. Espere 4 minutos: quando parar de borbulhar ' +
-      'e ficar cinza-azulado, o aspirador está pronto.',
+      'Balde, água fria, pó por cima. Água quente aborta a reação — por isso o aviso ' +
+      'vem impresso no próprio sachê.',
     icone: 'agua',
   },
   {
     numero: '03',
-    titulo: 'Aspire — e depois recolha o pó',
+    titulo: 'Espere a matéria se refazer',
     texto:
-      'A solução aspira a casa inteira em ~40 minutos. No fim, o pó volta a ser pó: ' +
-      'você raspa o coletor e pode reutilizar a mistura até três vezes.',
+      'A solução borbulha e endurece em 4 minutos: o VC-9 se materializa inteiro. ' +
+      'Passou de 6 minutos, a trava térmica devolve o pó.',
+    icone: 'reacao',
+  },
+  {
+    numero: '04',
+    titulo: 'Aspire a poeira do Impacto',
+    texto:
+      '34 kPa, filtro de sílica 9 e 72 h de reator próprio. Um ciclo inteiro de ' +
+      'aspiração, sem tomada e sem cabo na parede.',
     icone: 'aspirador',
   },
 ];
 
-export const MODO_PET = {
-  titulo: 'O detalhe que virou promessa',
+export const REACAO = {
+  titulo: 'O que acontece no balde',
   texto:
-    'Pó não ronca. Um aspirador comum faz 74 dB de motor; o Traclean faz o silêncio ' +
-    'de um pano sendo sacudido. E ainda solta aroma de lavanda — que é exatamente ' +
-    'o que segura o gato no cômodo em vez de fazê-lo fugir.',
+    'O Protocolo de Compactação Molecular funciona ao contrário de tudo o que a ' +
+    'humanidade já fez com água: em vez de dissolver, ele reconstrói. As moléculas ' +
+    'do pó se organizam, procuram a forma mais estável e devolvem o aparelho inteiro, ' +
+    'reator incluído.',
   bullets: [
-    'Sem motor: o único som é o do pó caindo',
-    'Aroma de lavanda (0,4%) — o gato deita para olhar',
-    'Escova anti-emaranhar que já vem montada na diluição',
-    'Bocal largo: não assusta na aproximação',
+    'A solução passa de cinza para azul-acinzentada e para de borbulhar',
+    'A matéria ganha forma sólida: corpo, bocal e filtro',
+    'O reator se acende sozinho ao fim da reação',
+    'Sobram 8 g de resíduo sólido, que são residuais neutros',
   ],
 };
 

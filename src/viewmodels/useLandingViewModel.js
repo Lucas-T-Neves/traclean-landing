@@ -1,8 +1,10 @@
 import { useMemo } from 'react';
 import { PRODUTO } from '../models/produto';
+import { APARELHO } from '../models/aparelho';
+import { IMPACTO, PROBLEMA, SOLUCAO } from '../models/contexto';
 import { BENEFICIOS } from '../models/beneficios';
 import { GALERIA } from '../models/galeria';
-import { PASSOS, MODO_PET } from '../models/passos';
+import { PASSOS, REACAO } from '../models/passos';
 import { DEPOIMENTOS, AVALIACAO_GERAL } from '../models/depoimentos';
 import { HERO, SECOES, NAV } from '../models/copy';
 
@@ -18,22 +20,21 @@ export function useLandingViewModel() {
       hero: HERO,
       secoes: SECOES,
       produto: PRODUTO,
+      aparelho: APARELHO,
+      contexto: { impacto: IMPACTO, problema: PROBLEMA, solucao: SOLUCAO },
       beneficios: BENEFICIOS,
       galeria: GALERIA,
       passos: PASSOS,
-      modoPet: MODO_PET,
+      reacao: REACAO,
       depoimentos: DEPOIMENTOS,
       avaliacaoGeral: AVALIACAO_GERAL,
     }),
     []
   );
 
-  // regra simples e util: a galeria sempre abre pela arte principal (ordem do model)
-  const galeriaOrdenada = useMemo(() => dados.galeria, [dados.galeria]);
+  const acoes = useMemo(() => ({ primeiraSecao: dados.nav[0].id }), [dados.nav]);
 
-  const acoes = useMemo(() => ({ abrirGaleria: () => galeriaOrdenada }), [galeriaOrdenada]);
-
-  return { dados: { ...dados, galeria: galeriaOrdenada }, acoes };
+  return { dados, acoes };
 }
 
 export default useLandingViewModel;

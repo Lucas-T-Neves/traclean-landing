@@ -4,6 +4,8 @@ import Cabecalho from './views/components/Cabecalho';
 import Rodape from './views/components/Rodape';
 import Modal from './views/components/Modal';
 import Hero from './views/sections/Hero';
+import Contexto from './views/sections/Contexto';
+import Aparelho from './views/sections/Aparelho';
 import Beneficios from './views/sections/Beneficios';
 import Galeria from './views/sections/Galeria';
 import ComoFunciona from './views/sections/ComoFunciona';
@@ -43,7 +45,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <a className="pular-para-conteudo" href="#beneficios">
+      <a className="pular-para-conteudo" href="#mundo">
         Pular para o conteúdo
       </a>
 
@@ -67,11 +69,19 @@ export default function App() {
           jaComprou={checkoutVM.jaComprou}
         />
 
+        <Contexto
+          impacto={d.contexto.impacto}
+          problema={d.contexto.problema}
+          solucao={d.contexto.solucao}
+        />
+
+        <Aparelho meta={d.secoes.aparelho} aparelho={d.aparelho} />
+
         <Beneficios meta={d.secoes.beneficios} itens={d.beneficios} />
 
         <Galeria meta={d.secoes.galeria} itens={d.galeria} />
 
-        <ComoFunciona meta={d.secoes['como-funciona']} passos={d.passos} modoPet={d.modoPet} />
+        <ComoFunciona meta={d.secoes['como-funciona']} passos={d.passos} reacao={d.reacao} />
 
         <ProvaSocial meta={d.secoes.avaliacoes} geral={d.avaliacaoGeral} depoimentos={d.depoimentos} />
 
@@ -79,6 +89,7 @@ export default function App() {
           meta={d.secoes.oferta}
           oferta={ofertaVM}
           produto={d.produto}
+          aparelho={d.aparelho}
           aoComprar={abrirCheckout}
           jaComprou={checkoutVM.jaComprou}
         />

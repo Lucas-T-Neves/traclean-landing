@@ -1,38 +1,30 @@
 /**
- * MODEL - galeria.
+ * MODEL - galeria: as tres etapas do material.
  * Cada item aponta para uma ILUSTRACAO vetorial feita no proprio projeto
- * (views/components/Ilustracoes.js). Nao usamos foto de terceiro do produto
- * porque o Traclean e ficticio: nao existe foto "real" dele em lugar nenhum.
+ * (views/components/Ilustracoes.js).
  */
 
 export const GALERIA = [
   {
     id: 'sache',
-    rotulo: 'Sachê de 400 g',
-    texto: 'Papel impermeável, sem plástico. Abre com a mão.',
+    rotulo: 'O sachê de 400 g',
+    texto: 'Envelope de papel com Pó Compactador PCM. Abre com a mão.',
     arte: 'sache',
     destaque: '400 g',
   },
   {
-    id: 'balde',
-    rotulo: 'Diluição em 2 L',
-    texto: 'Água fria, pó por cima, 4 minutos de espera.',
-    arte: 'balde',
+    id: 'reacao',
+    rotulo: 'A reação no balde',
+    texto: '4 minutos de borbulho e a matéria se refaz: corpo, bocal e filtro.',
+    arte: 'reacao',
     destaque: '4 min',
   },
   {
     id: 'filtro',
-    rotulo: 'Filtro de pó',
-    texto: 'Desliga com um clique e vai para a torneira.',
+    rotulo: 'Filtro de sílica 9',
+    texto: 'Retém o que volta do Impacto. E se reconstitui no fim do ciclo.',
     arte: 'filtro',
-    destaque: '10 s',
-  },
-  {
-    id: 'coleta',
-    rotulo: 'Recolha e reusa',
-    texto: 'O pó volta a ser pó. Dá para reciclar a mistura 3 vezes.',
-    arte: 'coleta',
-    destaque: '3 ciclos',
+    destaque: '0,3 µm',
   },
 ];
 

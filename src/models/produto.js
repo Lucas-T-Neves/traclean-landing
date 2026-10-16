@@ -1,61 +1,45 @@
 /**
- * MODEL - dados do produto.
- * Nenhum componente importa este arquivo direto: ele alimenta os viewmodels,
- * que por sua vez entregam { dados, acoes } para as views (padrao MVVM).
- *
- * CONCEITO: o Traclean e vendido como POCO em sachê. O cliente dilui o pó
- * em agua e o resultado e um aspirador de po. Todo o texto abaixo gira em
- * torno dessa tres passos, porque e o que precisa ficar explicito.
+ * MODEL - o produto que vende: o Pó Compactador.
+ * O que chega na caixa é o pó; o aspirador (VC-9) é o que a reação entrega.
+ * Todo o texto gira em torno dessas etapas.
  */
 
 export const PRODUTO = {
   marca: 'Traclean',
-  nome: 'Traclean Pro Pet',
-  categoria: 'Aspirador em pó (kit diluível)',
-  tagline: 'Pó. Água. Aspirador.',
-  promessa: 'Um pó. Um balde. Um aspirador.',
+  nome: 'Pó Compactador Traclean',
+  categoria: 'Pó de PCM sob licença Stark Industries (a empresa do Homem de Ferro)',
+  tagline: 'Pó. Água. Aparelho.',
   resumo:
-    'O Traclean chega em sachê de 400 g — não vem montado. Você abre o sachê, ' +
-    'derrama o pó em 2 litros de água fria, espera 4 minutos e pronto: um aspirador ' +
-    'de 25 kPa, sem plástico, sem cabo e sem tomada.',
-  descricaoLonga:
-    'Todo aspirador do mercado chega pronto: caixa grande, plástico, cabo e uma tomada. ' +
-    'O Traclean inverte isso. O que chega é um envelope de papel com 400 g de pó. ' +
-    'Você mistura com água, o pó se dissolve e forma o aspirador. Depois de aspirar, ' +
-    'ele volta a ser pó: você raspa o coletor e reutiliza até três vezes. ' +
-    'Por trás da piada, a proposta é séria: sem plástico na embalagem, sem bateria, ' +
-    'sem cabo, sem tomada e com aroma de lavanda para o gato não fugir do cômodo.',
+    'O Traclean não chega montado: chega 400 g de Pó Compactador em um sachê. ' +
+    'Você dilui em 2 litros de água fria, a reação do Protocolo de Compactação ' +
+    'Molecular refaz a matéria e, em 4 minutos, há um aspirador VC-9 inteiro na ' +
+    'sua pia.',
 
   receita: {
-    sachê: '1 sachê (400 g)',
-    agua: '2 L de água fria',
-    resultado: 'Aspirador de 25 kPa',
-    preparo: '4 minutos',
-    aviso: 'Sempre água fria. Água quente cristaliza o pó no tapete.',
+    entrada1: '1 sachê (400 g)',
+    entrada1Legenda: 'de Pó Compactador',
+    entrada2: '2 L de água fria',
+    entrada2Legenda: 'em um balde',
+    reacao: 'Reação PCM · 4 min',
+    reacaoLegenda: 'a matéria se refaz',
+    resultado: 'Traclean VC-9',
+    resultadoLegenda: '34 kPa, aspirador inteiro',
+    aviso: 'Água fria, sempre. Água quente aborta a reação e o pó vira uma cola.',
   },
 
   selos: [
-    { valor: '400', unidade: 'g', rotulo: 'de pó em cada sachê' },
-    { valor: '2', unidade: 'L', rotulo: 'de água para diluir' },
-    { valor: '3x', rotulo: 'reaproveitamento do pó', unidade: '' },
+    { valor: '400', unidade: 'g', rotulo: 'de Pó Compactador por sachê' },
+    { valor: '2', unidade: 'L', rotulo: 'de água para a reação' },
+    { valor: '4', unidade: 'min', rotulo: 'até o aparelho existir' },
   ],
 
-  fichaTecnica: [
-    { rotulo: 'Formato', valor: 'Pó em sachê de papel impermeável (sem plástico)' },
+  reactivo: [
+    { rotulo: 'Material', valor: 'Pó Compactador PCM (Stark Industries)' },
     { rotulo: 'Diluição', valor: '1 sachê (400 g) para 2 L de água fria' },
-    { rotulo: 'Tempo de preparo', valor: '4 minutos (espere o borbulho cessar)' },
-    { rotulo: 'Rendimento', valor: '2 L de solução ≈ 40 min de aspiração' },
-    { rotulo: 'Composição', valor: 'Sílica sulfatada, fibra de vidro, lavanda 0,4%' },
-    { rotulo: 'Aspiração', valor: '25 kPa de sucção · 0,9 L de pó por ciclo' },
-    { rotulo: 'Ciclo do pó', valor: 'Reaproveitável até 3 vezes' },
-    { rotulo: 'Peso montado', valor: '1,6 kg de aspirador pronto' },
-    { rotulo: 'Validade do pó', valor: '24 meses após o fechamento do sachê' },
-  ],
-
-  garantias: [
-    { titulo: '3 anos de garantia', texto: 'Cobre balde, filtro e qualquer defeito da mistura.' },
-    { titulo: '10 anos de peças', texto: 'Repomos balde, filtro e sachê, sem custo.' },
-    { titulo: '30 dias para testar', texto: 'Devolvemos o valor se o pó não aspirar, sem perguntas.' },
+    { rotulo: 'Tempo de reação', valor: '4 minutos · trava térmica em 6' },
+    { rotulo: 'Resultado', valor: '1 aparelho Traclean VC-9 completo' },
+    { rotulo: 'Rendimento', valor: '~55 min de aspiração por ciclo' },
+    { rotulo: 'Peso enviado', valor: '400 g em vez de 14 kg de aspirador' },
   ],
 };
 

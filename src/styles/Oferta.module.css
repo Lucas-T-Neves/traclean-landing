@@ -36,6 +36,17 @@
   margin-top: 4px;
 }
 
+.kit {
+  margin: 22px 0 0;
+  font-size: 22px;
+}
+
+.kitSub {
+  margin: 6px 0 0;
+  font-size: 13.5px;
+  color: var(--texto-claro-suave);
+}
+
 .de {
   font-size: 18px;
   color: rgba(168, 184, 201, 0.7);

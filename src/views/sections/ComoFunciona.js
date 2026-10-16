@@ -3,7 +3,7 @@ import Secao from '../components/Secao';
 import Icone from '../components/Icone';
 import petGato from '../../assets/images/pet-gato.jpg';
 
-export default function ComoFunciona({ meta, passos, modoPet }) {
+export default function ComoFunciona({ meta, passos, reacao }) {
   return (
     <Secao id="como-funciona" etiqueta={meta.etiqueta} titulo={meta.titulo} subtitulo={meta.subtitulo} tom="claro">
       <ol className={styles.passos}>
@@ -19,18 +19,18 @@ export default function ComoFunciona({ meta, passos, modoPet }) {
         ))}
       </ol>
 
-      <div className={styles.modoPet}>
-        <figure className={styles.modoPetFoto}>
+      <div className={styles.bloco}>
+        <figure className={styles.blocoFoto}>
           <img
             src={petGato}
-            alt="Gato descansando enquanto o aspirador trabalha na sala"
+            alt="Gato descansando enquanto a reacao acontece no balde"
           />
         </figure>
-        <div className={styles.modoPetTexto}>
-          <h3 className={styles.modoPetTitulo}>{modoPet.titulo}</h3>
-          <p className={styles.modoPetDescricao}>{modoPet.texto}</p>
-          <ul className={styles.modoPetLista}>
-            {modoPet.bullets.map((b) => (
+        <div className={styles.blocoTexto}>
+          <h3 className={styles.blocoTitulo}>{reacao.titulo}</h3>
+          <p className={styles.blocoDescricao}>{reacao.texto}</p>
+          <ul className={styles.blocoLista}>
+            {reacao.bullets.map((b) => (
               <li key={b}>
                 <Icone nome="check" tamanho={16} />
                 {b}
