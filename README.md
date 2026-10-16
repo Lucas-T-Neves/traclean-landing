@@ -1,6 +1,6 @@
 # Traclean Pro Pet
 
-> *Potência de laboratório. Silêncio de biblioteca.*
+> *Pó. Água. Aspirador.*
 > Landing page de um produto fictício, criada como **Atividade 01** da disciplina.
 
 ---
@@ -13,21 +13,32 @@
 
 ## Sobre o produto
 
-**Traclean Pro Pet** é um aspirador vertical sem fio fictício, voltado para casas
-que têm animal de estimação. A proposta central é curta e cabe numa frase:
-**"o aspirador que o gato aprova"**.
+**Traclean Pro Pet** é um aspirador fictício que **chega em pó**. O cliente não recebe
+um aparelho pronto: recebe um sachê de papel com 400 g de pó, dilui em 2 litros de
+água fria e, em 4 minutos, tem um aspirador de 25 kPa na mão. Depois de aspirar, o pó
+volta a ser pó e pode ser reutilizado até três vezes.
+
+A receita aparece como elemento visual no hero, porque era o ponto mais importante
+da página:
+
+```
+1 sachê (400 g)   +   2 L de água fria   =   Aspirador de 25 kPa
+ "é isso que chega"     "em um balde"           "pronto em 4 minutos"
+```
 
 | | |
 |---|---|
 | **Nome** | Traclean Pro Pet |
-| **Categoria** | Aspirador vertical sem fio |
+| **Categoria** | Aspirador em pó (kit diluível) |
 | **Público-alvo** | Pessoas que têm gato ou cachorro em casa e se cansaram de o bicho fugir do aspirador |
-| **Proposta** | Potência de aspirador profissional com o volume de uma conversa, escova que não emarancha pelo e um sensor que reduz a turbina quando o pet se aproxima |
-| **Preço (fictício)** | R$ 1.299 (de R$ 1.890) · 12x de R$ 129,90 |
-| **Diferenciais** | 62 dB no modo Pet · motor de 25 kPa · 45 min de bateria · filtro HEPA H13 autolimpo · escova com micro-cortes anti-emaranhar · sensor de proximidade |
+| **Formato** | Sachê de papel impermeável, 400 g de pó, sem plástico |
+| **Diluição** | 1 sachê (400 g) em 2 L de **água fria** · 4 minutos de preparo |
+| **Proposta** | Aspirador sem motor, sem cabo, sem tomada e sem plástico — com aroma de lavanda para o gato não fugir do cômodo |
+| **Preço (fictício)** | R$ 1.299 (de R$ 1.890) · 12x de R$ 129,90 · kit com 3 sachês |
+| **Diferenciais** | Sem motor (74 dB → silêncio) · 25 kPa de sucção · ~40 min por sachê · pó reaproveitável 3x · filtro lavável em 10 s |
 
-A identidade visual é o que segura a proposta: um aspirador de desenhete ficaria
-fora de lugar num apartamento. Por isso o Traclean foi pensado como **peça de
+A identidade visual é o que segura a proposta: um envelope de papel e um balde
+ficariam feios num apartamento. Por isso o Traclean foi pensado como **peça de
 decoração** — grafite, um único acento lima e nada de "branco+futurista".
 
 > ⚠️ **A Traclean não existe.** Produto, preços, avaliações, número de clientes e
@@ -174,6 +185,33 @@ foram nossas.
 
 ### Evolução da solução
 
+#### A maior virada: de aparelho para pó
+
+O Traclean nasceu como um aspirador vertical sem fio, montado, com 25 kPa e sensor de
+proximidade. Funcionava — e era exatamente por isso que não funcionava: com um produto
+comum, a página não tinha nada de próprio para dizer.
+
+Na revisão, a pergunta que faltava era *"o que o cliente recebe na porta?"*. E a
+resposta que fez sentido foi: **um envelope de pó**. Não um aparelho. O cliente abre o
+sachê, dilui em água e o aspirador aparece. Isso virou o núcleo do produto inteiro.
+
+O que mudou em cada lugar da página:
+
+| Antes (aparelho) | Depois (pó) |
+|---|---|
+| Chega montado | Chega em sachê de 400 g |
+| 62 dB por Isolation acoustic | Sem motor: silêncio de pano sacudido |
+| 45 min de bateria | 400 g de pó = 2 L de solução ≈ 40 min |
+| "Como funciona": 3 passos de uso | 3 passos: rasgar, diluir, aspirar |
+| Oferta: 1 aparelho | Oferta: kit com 3 sachês + balde medidor |
+| Ficha técnica de motor | Ficha técnica de composição, diluição e rendimento |
+| FAQ sobre garantia e prazo | FAQ com metade das perguntas sobre diluir |
+| Galeria: corpo, escova, filtro, estação | Galeria: sachê, balde, filtro, recolha |
+
+E o hero ganhou a **receita visual** — sachê + 2 L de água = aspirador — porque era o
+ponto que não podia ficar implícito: se o visitante não entender em três segundos que o
+produto é um pó que precisa ser diluído, a página falhou em três segundos.
+
 #### A maior mudança: de foto para ilustração vetorial
 
 Esta foi a decisão mais importante do projeto, e ela nasceu de **duas tentativas
@@ -233,10 +271,11 @@ creditada mesmo assim).
 **Como avaliamos**
 
 O build de produção fecha em **59 kB de JavaScript + 6 kB de CSS** (gzip), sem
-dependências além do React. O teste automatizado roda **27 verificações** —
+dependências além do React. O teste automatizado roda **39 verificações** —
 render das seções, contagem dos cards, formato do preço, parcelamento, desconto,
 acordeão abrindo e fechando, modal abrindo, validação **bloqueando** o envio vazio,
-confirmação gerando código de pedido e o CTA trocando de estado.
+confirmação gerando código de pedido, o CTA trocando de estado e — depois da virada para
+pó — 12 checagens garantindo que a diluição está explícita em hero, passos, FAQ e oferta.
 
 O que mais nos surpreendeu foi o quanto rendeu a **revisão visual**. Os dois piores
 bugs do projeto (foto quebrada e a paleta da seção de FAQ) só apareceram quando

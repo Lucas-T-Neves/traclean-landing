@@ -6,7 +6,7 @@
 
 export const NAV = [
   { id: 'beneficios', rotulo: 'Benefícios' },
-  { id: 'galeria', rotulo: 'Design' },
+  { id: 'galeria', rotulo: 'Do pó ao aspirador' },
   { id: 'como-funciona', rotulo: 'Como funciona' },
   { id: 'avaliacoes', rotulo: 'Avaliações' },
   { id: 'oferta', rotulo: 'Oferta' },
@@ -14,54 +14,55 @@ export const NAV = [
 ];
 
 export const HERO = {
-  etiqueta: 'Novo · Lote de lançamento',
-  titulo: 'O aspirador que o gato aprova.',
-  destaque: 'o gato aprova',
+  etiqueta: 'Novo · chega em sachê de pó',
+  tituloAntes: 'Um pó. Um balde.',
+  tituloDestaque: 'Um aspirador.',
   subtitulo:
-    '25 kPa de sucção industrial com 62 dB de silêncio. Escova que não puxa pelo, ' +
-    'filtro que se limpa sozinho e um sensor que pede licença pro pet antes de sugar.',
+    'O Traclean não chega montado: vem 400 g de pó em sachê de papel. Você dilui em ' +
+    '2 litros de água fria, espera 4 minutos e já tem um aspirador de 25 kPa — sem ' +
+    'plástico, sem cabo e sem tomada.',
   ctaPrimario: 'Quero o Traclean',
-  ctaSecundario: 'Ver como funciona',
-  nota: 'Risco zero: 30 dias para testar · 3 anos de garantia',
+  ctaSecundario: 'Ver a diluição',
+  nota: 'A instrução vem na caixa e está no próprio sachê: água fria, sempre.',
 };
 
 export const SECOES = {
   beneficios: {
     etiqueta: 'Diferenciais',
-    titulo: 'Seis coisas que só o Traclean tem',
+    titulo: 'O que muda quando o aspirador é pó',
     subtitulo:
-      'Não é "mais um aspirador". Cada item abaixo resolve uma reclamação concreta ' +
-      'que ouvimos de quem tem animal em casa.',
+      'Sem motor, sem plástico e sem tomada. Cada item abaixo resolve uma ' +
+      'reclamação concreta de quem tem animal em casa.',
   },
   galeria: {
-    etiqueta: 'Design',
-    titulo: 'Projetado para ficar à vista',
+    etiqueta: 'Do pó ao aspirador',
+    titulo: 'Do sachê ao aspirador em três toques',
     subtitulo:
-      'Nada de esconder o aspirador no armário. O Traclean foi desenhado para ficar ' +
-      'no canto da sala como parte da decoração.',
+      'Nada de caixa grande e plástico bolado. O que chega é um envelope de papel — ' +
+      'e o resto você faz em casa, em 4 minutos.',
   },
   'como-funciona': {
     etiqueta: 'Como funciona',
-    titulo: 'Três passos, nenhum trabalho extra',
-    subtitulo: 'Do sofá sujo ao depósito limpo sem lavar nada.',
+    titulo: 'Rasgue o sachê, dilua, aspire',
+    subtitulo: 'O passo a passo da diluição, sem letra miúda.',
   },
   avaliacoes: {
     etiqueta: 'Prova social',
-    titulo: 'Quem tem gato em casa aprova',
+    titulo: 'Quem diluiu e não voltou para o aspirador comum',
     subtitulo: 'Avaliações fictícias, como toda esta landing page.',
   },
   oferta: {
     etiqueta: 'Oferta',
-    titulo: 'Tudo o que vem na caixa',
-    subtitulo: 'Preço de lançamento por tempo limitado.',
+    titulo: 'O que vem no kit',
+    subtitulo: 'Três sachês, um balde e o manual que explica a diluição.',
   },
   faq: {
     etiqueta: 'Dúvidas',
-    titulo: 'Perguntas que a gente mais recebe',
-    subtitulo: 'Incluindo a última, que quase ninguém responde.',
+    titulo: 'As perguntas que a gente mais recebe',
+    subtitulo: 'A começar por "isso é pó mesmo?".',
   },
   chamada: {
-    titulo: 'Pronto para limpar sem brigar com o gato?',
+    titulo: 'Pronto para aspirar sem gastar plástico?',
     texto: 'Frete grátis, 30 dias para testar e 3 anos de garantia.',
   },
 };
@@ -83,7 +84,7 @@ export const MODAL = {
     { id: 'telefone', rotulo: 'Telefone', tipo: 'tel', placeholder: '(11) 90000-0000' },
     { id: 'cidade', rotulo: 'Cidade de entrega', tipo: 'text', placeholder: 'São Paulo' },
   ],
-  check: 'Minha casa tem animal (avisamos antes de enviar o "kit pet")',
+  check: 'Minha casa tem animal (o pó tem aroma de lavanda)',
   rodapeBotao: 'Confirmar pedido fictício',
 };
 

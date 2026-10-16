@@ -6,52 +6,52 @@
 
 export const BENEFICIOS = [
   {
-    id: 'silencio',
+    id: 'sem-motor',
     icone: 'onda',
-    titulo: 'Silêncio que não assusta',
+    titulo: 'Sem motor, sem susto',
     texto:
-      '62 dB no modo Pet: dá para aspirar com o gato no mesmo cômodo. ' +
-      'No Turbo, 74 dB — ainda menos que um aspirador comum.',
+      'Pó não ronca. Um aspirador comum faz 74 dB; o Traclean faz o silêncio de um ' +
+      'pano sacudido. O gato não sai correndo — ele dorme.',
+  },
+  {
+    id: 'diluicao',
+    icone: 'agua',
+    titulo: 'Dilui em 4 minutos',
+    texto:
+      '1 sachê de 400 g em 2 L de água fria. Espere o borbulho cessar e o pó ' +
+      'vira aspirador. Sem motor, sem cabo, sem tomada.',
   },
   {
     id: 'escova',
     icone: 'escova',
     titulo: 'Escova que não puxa pelo',
     texto:
-      'Cerdas com micro-cortes que impedem o emaranhado. Depois de 6 meses de uso ' +
-      'com dois gatos, a escova continua como nova.',
+      'A escova já vem montada na diluição, com cerdas de micro-cortes que impedem ' +
+      'o emaranhado. Depois de 6 meses com dois gatos, continua como nova.',
   },
   {
-    id: 'sensor',
-    icone: 'olho',
-    titulo: 'Sensor que pede licença ao pet',
+    id: 'rendimento',
+    icone: 'sache',
+    titulo: 'Sachê que rende a casa inteira',
     texto:
-      'O sensor identifica calor e movimento e reduz a turbina sozinha. ' +
-      'O gato não foge — ele nem percebe.',
-  },
-  {
-    id: 'bateria',
-    icone: 'bateria',
-    titulo: 'Bateria de casa inteira',
-    texto:
-      '45 minutos no modo Eco dão conta de um apartamento de 3 quartos. ' +
-      'Recarga na parede: deixou na tomada, pronto.',
+      '400 g de pó rendem 2 L de solução — cerca de 40 minutos de aspiração. ' +
+      'O kit vem com 3 sachês: um mês sem repetir diluição.',
   },
   {
     id: 'filtro',
     icone: 'filtro',
-    titulo: 'Filtro que se limpa sozinho',
+    titulo: 'Filtro que se lava em 10 segundos',
     texto:
-      'HEPA H13 de verdade. Um botão esvazia o filtro, outro elimina o odor ' +
-      'acumulado. Nada de lavar poeira no fim de semana.',
+      'O filtro do pó se desliga com um clique e vai para a torneira. Nada de lavar ' +
+      'com delicadeza nem esperar secar — o pó seca rápido.',
   },
   {
-    id: 'despejo',
-    icone: 'lixeira',
-    titulo: 'Esvazia com um clique',
+    id: 'ciclo',
+    icone: 'reaproveitar',
+    titulo: 'O pó volta a ser pó',
     texto:
-      'A trava solta o depósito inteiro, sem encostar em pó. 0,9 L de capacidade ' +
-      'e base que se limpa passando na mão.',
+      'Terminou de aspirar? Raspe o coletor e reutilize a mistura até três vezes. ' +
+      'Só troca o sachê quando a sucção cair pela metade.',
   },
 ];
 

@@ -2,47 +2,60 @@
  * MODEL - dados do produto.
  * Nenhum componente importa este arquivo direto: ele alimenta os viewmodels,
  * que por sua vez entregam { dados, acoes } para as views (padrao MVVM).
+ *
+ * CONCEITO: o Traclean e vendido como POCO em sachê. O cliente dilui o pó
+ * em agua e o resultado e um aspirador de po. Todo o texto abaixo gira em
+ * torno dessa tres passos, porque e o que precisa ficar explicito.
  */
 
 export const PRODUTO = {
   marca: 'Traclean',
   nome: 'Traclean Pro Pet',
-  categoria: 'Aspirador vertical sem fio',
-  tagline: 'Potência de laboratório. Silêncio de biblioteca.',
-  promessa: 'O aspirador que o gato aprova.',
+  categoria: 'Aspirador em pó (kit diluível)',
+  tagline: 'Pó. Água. Aspirador.',
+  promessa: 'Um pó. Um balde. Um aspirador.',
   resumo:
-    'Um aspirador vertical que junta a sucção de umindustrial com o volume de ' +
-    'uma/library. Feito para casas com pets: escova que não puxa pelo, ' +
-    'modo Pet que reduz o ruído e sensor que desliga sozinho quando o bicho se aproxima.',
+    'O Traclean chega em sachê de 400 g — não vem montado. Você abre o sachê, ' +
+    'derrama o pó em 2 litros de água fria, espera 4 minutos e pronto: um aspirador ' +
+    'de 25 kPa, sem plástico, sem cabo e sem tomada.',
   descricaoLonga:
-    'O Traclean Pro Pet nasceu de uma reclamação real: todo aspirador assusta o gato. ' +
-    'Reduzimos o ruído, reescrevemos a escova para não emaranhar pelo e ' +
-    'colocamos um sensor que percebe o pet e desliga a turbina automaticamente. ' +
-    'O resto é engenharia de verdade: motor de 25 kPa, bateria de 45 minutos e filtro ' +
-    'HEPA H13 que se limpa sozinho.',
+    'Todo aspirador do mercado chega pronto: caixa grande, plástico, cabo e uma tomada. ' +
+    'O Traclean inverte isso. O que chega é um envelope de papel com 400 g de pó. ' +
+    'Você mistura com água, o pó se dissolve e forma o aspirador. Depois de aspirar, ' +
+    'ele volta a ser pó: você raspa o coletor e reutiliza até três vezes. ' +
+    'Por trás da piada, a proposta é séria: sem plástico na embalagem, sem bateria, ' +
+    'sem cabo, sem tomada e com aroma de lavanda para o gato não fugir do cômodo.',
+
+  receita: {
+    sachê: '1 sachê (400 g)',
+    agua: '2 L de água fria',
+    resultado: 'Aspirador de 25 kPa',
+    preparo: '4 minutos',
+    aviso: 'Sempre água fria. Água quente cristaliza o pó no tapete.',
+  },
 
   selos: [
-    { valor: '62', unidade: 'dB', rotulo: 'mais baixo que uma conversa' },
-    { valor: '25', unidade: 'kPa', rotulo: 'de sucção real' },
-    { valor: '45', unidade: 'min', rotulo: 'de bateria por carga' },
+    { valor: '400', unidade: 'g', rotulo: 'de pó em cada sachê' },
+    { valor: '2', unidade: 'L', rotulo: 'de água para diluir' },
+    { valor: '3x', rotulo: 'reaproveitamento do pó', unidade: '' },
   ],
 
   fichaTecnica: [
-    { rotulo: 'Sucção', valor: '25 kPa (motor AWDC)' },
-    { rotulo: 'Ruído', valor: '62 dB no modo Pet / 74 dB no Turbo' },
-    { rotulo: 'Bateria', valor: '45 min (Eco) · 25 min (Turbo)' },
-    { rotulo: 'Filtro', valor: 'HEPA H13 lavável, autolimpeza por botão' },
-    { rotulo: 'Escova', valor: 'Anti-emaranhar com corte automático de fio' },
-    { rotulo: 'Depósito', valor: '0,9 L, esvazia com um clique' },
-    { rotulo: 'Peso', valor: '1,6 kg vazio' },
-    { rotulo: 'Estação', valor: 'Recarga na parede · 3 h para 100%' },
-    { rotulo: 'Acessórios', valor: 'Escova de sofá, bico estreito, suporte de parede' },
+    { rotulo: 'Formato', valor: 'Pó em sachê de papel impermeável (sem plástico)' },
+    { rotulo: 'Diluição', valor: '1 sachê (400 g) para 2 L de água fria' },
+    { rotulo: 'Tempo de preparo', valor: '4 minutos (espere o borbulho cessar)' },
+    { rotulo: 'Rendimento', valor: '2 L de solução ≈ 40 min de aspiração' },
+    { rotulo: 'Composição', valor: 'Sílica sulfatada, fibra de vidro, lavanda 0,4%' },
+    { rotulo: 'Aspiração', valor: '25 kPa de sucção · 0,9 L de pó por ciclo' },
+    { rotulo: 'Ciclo do pó', valor: 'Reaproveitável até 3 vezes' },
+    { rotulo: 'Peso montado', valor: '1,6 kg de aspirador pronto' },
+    { rotulo: 'Validade do pó', valor: '24 meses após o fechamento do sachê' },
   ],
 
   garantias: [
-    { titulo: '3 anos de garantia', texto: 'Cobre motor, bateria e eletrônicos.' },
-    { titulo: '10 anos de peças', texto: 'Repomos qualquer peça do produto, sem custo.' },
-    { titulo: '30 dias para testar', texto: 'Devolvemos o valor se não gostar, sem perguntas.' },
+    { titulo: '3 anos de garantia', texto: 'Cobre balde, filtro e qualquer defeito da mistura.' },
+    { titulo: '10 anos de peças', texto: 'Repomos balde, filtro e sachê, sem custo.' },
+    { titulo: '30 dias para testar', texto: 'Devolvemos o valor se o pó não aspirar, sem perguntas.' },
   ],
 };
 

@@ -1,69 +1,72 @@
 /**
  * MODEL - FAQ.
- * Mix proposital: as tres primeiras sao duvidas reais de compra,
- * as do meio playful (o produto tem personalidade) e a ultima e a que
- * todo mundo faz e quase nenhum site responde.
+ * As tres primeiras respondem a duvida que TODO mundo tem ao ver o produto:
+ * "isso e po? precisa diluir? como e que funciona?".
  */
 
 export const FAQ = [
   {
     id: 'f1',
-    pergunta: 'Faz barulho demais?',
+    pergunta: 'Isso é um aspirador de verdade?',
     resposta:
-      'No modo Pet são 62 dB — aproximadamente o volume de uma conversa em casa. ' +
-      'No Turbo sobe para 74 dB, ainda menos que um aspirador comum. ' +
-      'O modo Pet vem ligado de fábrica.',
+      'É um pó que vira aspirador. O produto chega em sachê de 400 g; você dilui em ' +
+      '2 litros de água fria e, em 4 minutos, tem um aspirador de 25 kPa funcionando. ' +
+      'Nada de plástico, cabo ou tomada.',
   },
   {
     id: 'f2',
-    pergunta: 'Meu gato vai ter medo?',
+    pergunta: 'Precisa diluir com água quente ou fria?',
     resposta:
-      'Esse foi o problema que deu origem ao produto. O sensor reduz a turbina ' +
-      'quando detecta o pet perto do bocal e a escova não puxa pelo. ' +
-      'Nos testes internos, 9 em cada 10 gatos ficaram no cômodo.',
+      'Fria, sempre. Água quente cristaliza o pó no tapete e você passa o resto ' +
+      'da semana raspando. A caixa avisa isso em letra grande, justamente porque ' +
+      'ninguém lê caixa.',
   },
   {
     id: 'f3',
-    pergunta: 'Em quanto tempo chega?',
+    pergunta: 'Quanto rende um sachê?',
     resposta:
-      'O envio é feito em até 2 dias úteis e a entrega leva de 3 a 5 dias úteis ' +
-      'para todo o Brasil, com frete grátis neste lançamento.',
+      'Um sachê (400 g) diluído em 2 L de água rende cerca de 40 minutos de ' +
+      'aspiração — o equivalente a umapartamento de 3 quartos de uma vez. O kit ' +
+      'vem com 3 sachês.',
   },
   {
     id: 'f4',
-    pergunta: 'Troco se não gostar?',
+    pergunta: 'Como sei que a mistura ficou pronta?',
     resposta:
-      'Você tem 30 dias para testar. Se não gostar, devolvemos 100% do valor — ' +
-      'inclusive a frete, se pagar. É só acionar pelo site em "Meu Traclean".',
+      'A cor muda de cinza-claro para um cinza-azulado e para de borbulhar. ' +
+      'Leva cerca de 4 minutos. Se borbulhar ainda, aspire de leve: usar antes ' +
+      'da hora só espalha pó.',
   },
   {
     id: 'f5',
-    pergunta: 'O filtro não precisa ser lavado?',
+    pergunta: 'Posso reaproveitar o pó já usado?',
     resposta:
-      'Não. O filtro HEPA H13 tem autolimpeza: um botão esvazia a sujeira presa ' +
-      'e outro elimina o odor. Só uma lavagem a cada ~3 meses, e suja d’água.',
+      'Pode, até três ciclos. Depois disso o pó perde a viscosidade e a aspiração ' +
+      'cai pela metade. A regra prática: se a mistura não puxar mais o pó do tapete, ' +
+      'é hora de trocar o sachê.',
   },
   {
     id: 'f6',
-    pergunta: 'Sirve paraCarpete alto?',
+    pergunta: 'O pó assusta o gato?',
     resposta:
-      'Serve, e é um dos casos de uso que mais gostamos: no modo Turbo ele extrai ' +
-      'de Carpete de até 2 cm. Para Carpete de pelo longo, use o bico estreito.',
+      'Não. Não há motor ligado, então não há o ronco que faz o gato sair correndo. ' +
+      'Além disso o pó tem aroma de lavanda — nos testes internos, 9 em cada 10 gatos ' +
+      'ficaram no cômodo durante a limpeza.',
   },
   {
     id: 'f7',
-    pergunta: 'O que não funciona com o Traclean?',
+    pergunta: 'O balde é incluso?',
     resposta:
-      'Ser honesto: ele não aspira líquidos derramados e não sobe escada. ' +
-      'Para isso existe a linha profissional — e, convenhamos, ninguém usa aspirador na escada.',
+      'Sim: o kit vem com 1 balde medidor de 2 L e 1 filtro de reposição. O pó é ' +
+      'que vai diluído; o balde é onde isso acontece.',
   },
   {
     id: 'f8',
-    pergunta: 'É um produto real?',
+    pergunta: 'Isso é um produto real?',
     resposta:
-      'Não. A Traclean é um produto fictício criado para a disciplina, e esta ' +
-      'landing page é um protótipo acadêmico — o "checkout" não cobra ninguém ' +
-      'e nada é enviado para servidor.',
+      'Não. A Traclean é um produto fictício criado para a disciplina, e esta landing ' +
+      'page é um protótipo acadêmico — o "checkout" não cobra ninguém e nada é ' +
+      'enviado para servidor.',
   },
 ];
 

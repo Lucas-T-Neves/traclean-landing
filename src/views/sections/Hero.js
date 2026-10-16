@@ -1,10 +1,11 @@
 import styles from '../../styles/Hero.module.css';
 import Botao from '../components/Botao';
 import Etiqueta from '../components/Etiqueta';
+import Icone from '../components/Icone';
 import { IlustracaoProduto } from '../components/Ilustracoes';
 import petGato from '../../assets/images/pet-gato.jpg';
 
-export default function Hero({ hero, produto, aoComprar, aoRolarPara, jaComprou }) {
+export default function Hero({ hero, produto, receita, aoComprar, aoRolarPara, jaComprou }) {
   return (
     <section className={styles.hero} id="topo">
       <div className={styles.fundoBrilho} aria-hidden="true" />
@@ -14,7 +15,7 @@ export default function Hero({ hero, produto, aoComprar, aoRolarPara, jaComprou 
           <Etiqueta>{hero.etiqueta}</Etiqueta>
 
           <h1 className={styles.titulo}>
-            O aspirador que <span className={styles.destaque}>{hero.destaque}</span>.
+            {hero.tituloAntes} <span className={styles.destaque}>{hero.tituloDestaque}</span>
           </h1>
 
           <p className={styles.subtitulo}>{hero.subtitulo}</p>
@@ -29,6 +30,38 @@ export default function Hero({ hero, produto, aoComprar, aoRolarPara, jaComprou 
           </div>
 
           <p className={styles.nota}>{hero.nota}</p>
+
+          {/* A receita: e aqui que o conceito precisa ficar explicito, sem duvida */}
+          <div className={styles.receita} aria-label="Como preparar o Traclean">
+            <div className={styles.receitaItem}>
+              <Icone nome="sache" tamanho={22} />
+              <span>
+                <strong>{receita.sachê}</strong>
+                <small>é isso que chega</small>
+              </span>
+            </div>
+            <span className={styles.receitaOp} aria-hidden="true">+</span>
+            <div className={styles.receitaItem}>
+              <Icone nome="agua" tamanho={22} />
+              <span>
+                <strong>{receita.agua}</strong>
+                <small>em um balde</small>
+              </span>
+            </div>
+            <span className={styles.receitaOp} aria-hidden="true">=</span>
+            <div className={`${styles.receitaItem} ${styles.receitaResultado}`}>
+              <Icone nome="aspirador" tamanho={22} />
+              <span>
+                <strong>{receita.resultado}</strong>
+                <small>pronto em {receita.preparo}</small>
+              </span>
+            </div>
+          </div>
+
+          <p className={styles.receitaAviso}>
+            <Icone nome="tempo" tamanho={16} />
+            {receita.aviso}
+          </p>
 
           <ul className={styles.selos}>
             {produto.selos.map((s) => (

@@ -69,55 +69,56 @@ export function IlustracaoProduto() {
 }
 
 const ARTES = {
-  corpo: (
+  sache: (
     <g>
-      <rect x="46" y="34" width="108" height="128" rx="32" fill="url(#corpoTraclean)" stroke="#3C5375" strokeWidth="2" />
-      <rect x="64" y="20" width="72" height="22" rx="11" fill="#C6F24E" />
-      <rect x="62" y="62" width="76" height="40" rx="12" fill="#0B1320" stroke="#2E4A66" strokeWidth="1.5" />
-      <circle cx="100" cy="82" r="9" fill="#C6F24E" />
-      <rect x="78" y="118" width="44" height="5" rx="2.5" fill="#4A6183" />
-      <rect x="46" y="138" width="108" height="13" rx="6.5" fill="#C6F24E" />
-      <path d="M170 74h22M182 62l12 12-12 12" stroke="#C6F24E" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-      <text x="176" y="106" fontSize="13" fill="#94A3B8" fontFamily="monospace">1,6 kg</text>
+      <path d="M70 26h100l-8 152H78z" fill="url(#corpoTraclean)" stroke="#3C5375" strokeWidth="2" />
+      <path d="M70 26c8-7 20-7 28 0 8-7 20-7 28 0 8-7 20-7 28 0" fill="none" stroke="#3C5375" strokeWidth="2" />
+      <rect x="80" y="58" width="80" height="34" rx="8" fill="#0B1320" />
+      <text x="120" y="81" fontSize="15" fill="#C6F24E" fontFamily="monospace" textAnchor="middle">TRACLEAN</text>
+      <rect x="80" y="104" width="80" height="8" rx="4" fill="#4A6183" />
+      <rect x="80" y="120" width="56" height="8" rx="4" fill="#4A6183" />
+      <text x="120" y="160" fontSize="20" fill="#C6F24E" fontFamily="monospace" textAnchor="middle">400 g</text>
+      <path d="M186 40c8 6 12 14 12 24" stroke="#C6F24E" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+      <path d="M62 40c-8 6-12 14-12 24" stroke="#C6F24E" strokeWidth="2.5" fill="none" strokeLinecap="round" />
     </g>
   ),
-  escova: (
+  balde: (
     <g>
-      <rect x="36" y="46" width="148" height="58" rx="26" fill="url(#corpoTraclean)" stroke="#3C5375" strokeWidth="2" />
-      <rect x="44" y="58" width="132" height="34" rx="17" fill="#0B1320" />
-      {[0, 1, 2, 3, 4, 5, 6].map((i) => (
-        <rect key={i} x={54 + i * 18} y="63" width="9" height="24" rx="4.5" fill="#4A6183" />
-      ))}
-      <path d="M56 92c8 10 22 12 34 6" stroke="#8A6B3D" strokeWidth="2.5" fill="none" strokeLinecap="round" opacity="0.8" />
-      <path d="M148 78l14-12M148 84l16-4" stroke="#C6F24E" strokeWidth="2.5" strokeLinecap="round" />
-      <circle cx="196" cy="62" r="4" fill="#C6F24E" />
-      <text x="60" y="128" fontSize="12" fill="#94A3B8" fontFamily="monospace">micro-cortes</text>
+      <path d="M64 62h112l-10 118H74z" fill="#0E1727" stroke="#4A6183" strokeWidth="2" />
+      <path d="M68 96h104l-8 84H76z" fill="#2E4A66" opacity="0.9" />
+      <path d="M70 74c14 12 40 18 56 6 10-7 22-5 30 3" stroke="#5E7A9E" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+      <path d="M60 52h120" stroke="#3C5375" strokeWidth="3" strokeLinecap="round" />
+      <path d="M120 20v22" stroke="#C6F24E" strokeWidth="2.5" strokeLinecap="round" />
+      <circle cx="120" cy="52" r="4" fill="#C6F24E" />
+      <circle cx="104" cy="120" r="4" fill="#8A9BB5" opacity="0.8" />
+      <circle cx="132" cy="140" r="3" fill="#8A9BB5" opacity="0.6" />
+      <circle cx="118" cy="156" r="4" fill="#8A9BB5" opacity="0.7" />
+      <text x="120" y="200" fontSize="12" fill="#94A3B8" fontFamily="monospace" textAnchor="middle">2 L + 1 sachê</text>
     </g>
   ),
   filtro: (
     <g>
-      <rect x="58" y="34" width="104" height="118" rx="20" fill="#0E1727" stroke="#4A6183" strokeWidth="2" />
-      {[0, 1, 2, 3, 4, 5].map((i) => (
-        <rect key={i} x="68" y={46 + i * 16} width="84" height="6" rx="3" fill="#26374F" />
+      <rect x="82" y="34" width="76" height="110" rx="16" fill="#0E1727" stroke="#4A6183" strokeWidth="2" />
+      {[0, 1, 2, 3, 4].map((i) => (
+        <rect key={i} x="90" y={48 + i * 17} width="60" height="6" rx="3" fill="#26374F" />
       ))}
-      <circle cx="86" cy="70" r="3.5" fill="#8A6B3D" />
-      <circle cx="126" cy="94" r="3" fill="#8A6B3D" />
-      <circle cx="104" cy="118" r="3.5" fill="#8A6B3D" opacity="0.7" />
-      <rect x="84" y="136" width="52" height="16" rx="8" fill="#C6F24E" />
-      <path d="M186 58l10 10M206 74l8-8" stroke="#C6F24E" strokeWidth="2.5" strokeLinecap="round" />
-      <text x="58" y="176" fontSize="12" fill="#94A3B8" fontFamily="monospace">HEPA H13</text>
+      <circle cx="106" cy="70" r="3.5" fill="#8A6B3D" />
+      <circle cx="134" cy="92" r="3" fill="#8A6B3D" />
+      <circle cx="116" cy="116" r="3.5" fill="#8A6B3D" opacity="0.7" />
+      <rect x="100" y="132" width="40" height="14" rx="7" fill="#C6F24E" />
+      <path d="M176 56l10 10M194 74l8-8" stroke="#C6F24E" strokeWidth="2.5" strokeLinecap="round" />
+      <text x="120" y="176" fontSize="12" fill="#94A3B8" fontFamily="monospace" textAnchor="middle">lavar em 10 s</text>
     </g>
   ),
-  estacao: (
+  coleta: (
     <g>
-      <path d="M30 30v130h160" stroke="#26374F" strokeWidth="3" fill="none" strokeLinecap="round" />
-      <rect x="128" y="58" width="56" height="82" rx="14" fill="url(#corpoTraclean)" stroke="#3C5375" strokeWidth="2" />
-      <rect x="128" y="84" width="56" height="9" rx="4.5" fill="#C6F24E" />
-      <path d="M156 140v18" stroke="#4A6183" strokeWidth="4" strokeLinecap="round" />
-      <path d="M136 176l20-18 20 18" stroke="#4A6183" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="192" cy="46" r="16" fill="none" stroke="#C6F24E" strokeWidth="2.5" />
-      <path d="M192 38v10l7 4" stroke="#C6F24E" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-      <text x="30" y="196" fontSize="12" fill="#94A3B8" fontFamily="monospace">recarga na parede</text>
+      <circle cx="104" cy="104" r="52" fill="none" stroke="#C6F24E" strokeWidth="2.5" strokeDasharray="6 6" />
+      <path d="M86 78c10-12 28-12 38 0 8 10 4 26-10 32-14 6-30-2-30-16" fill="none" stroke="#C6F24E" strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M150 62l12-10-2 16" fill="#C6F24E" />
+      <circle cx="92" cy="128" r="3.5" fill="#8A9BB5" />
+      <circle cx="118" cy="136" r="3" fill="#8A9BB5" />
+      <circle cx="106" cy="112" r="3" fill="#8A9BB5" opacity="0.7" />
+      <text x="104" y="186" fontSize="12" fill="#94A3B8" fontFamily="monospace" textAnchor="middle">3 ciclos</text>
     </g>
   ),
 };

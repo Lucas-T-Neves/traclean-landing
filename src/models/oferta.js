@@ -5,7 +5,7 @@
  */
 
 export const OFERTA = {
-  titulo: 'Traclean Pro Pet',
+  titulo: 'Kit Traclean 3 sachês',
   preco: 1299,
   precoFormatado: 'R$ 1.299',
   de: 1890,
@@ -14,14 +14,14 @@ export const OFERTA = {
   valorParcela: 129.9,
   valorParcelaFormatado: 'R$ 129,90',
   descontoPercentual: 31,
-  selo: 'Lote de lançamento — 312 unidades',
+  selo: 'Lote de lançamento — 312 kits',
   condicaoPagamento: 'até 12x no cartão · Pix com 5% de desconto',
   envio: 'Frete grátis para todo o Brasil em até 5 dias úteis',
   incluso: [
-    'Aspirador Traclean Pro Pet',
-    'Estação de recarga para parede',
-    'Escova de sofá + bico estreito',
-    'Filtro HEPA H13 extra',
+    '3 sachês de pó Traclean (400 g cada)',
+    'Balde medidor de 2 L',
+    'Filtro de reposição',
+    'Manual de diluição ilustrado',
     '3 anos de garantia + 10 anos de peças',
   ],
 };

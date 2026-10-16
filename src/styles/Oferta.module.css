@@ -18,6 +18,16 @@
   gap: 14px;
 }
 
+.categoria {
+  display: inline-block;
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--texto-claro-suave);
+}
+
 .precos {
   display: flex;
   align-items: baseline;

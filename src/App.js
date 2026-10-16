@@ -61,6 +61,7 @@ export default function App() {
         <Hero
           hero={d.hero}
           produto={d.produto}
+          receita={d.produto.receita}
           aoComprar={abrirCheckout}
           aoRolarPara={acoesNav.irPara}
           jaComprou={checkoutVM.jaComprou}

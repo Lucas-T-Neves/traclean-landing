@@ -1,46 +1,47 @@
 /**
  * MODEL - "como funciona".
- * Passos simples, porque a proposta e justamente a simplicidade.
+ * A tres etapas sao literais: abrir o sachê, diluir em agua, aspirar.
+ * E aqui que o conceito precisa ficar explicito para ninguem entender errado.
  */
 
 export const PASSOS = [
   {
     numero: '01',
-    titulo: 'Passeie e aspire',
+    titulo: 'Rasgue o sachê',
     texto:
-      'O modo Pet já vem ligado. Você encosta no sofá, no tapete, no canto — ' +
-      'e o sensor cuida do resto.',
-    icone: 'aspirador',
+      'Chega um envelope de papel com 400 g de pó. Não é aspirador montado, ' +
+      'não tem plástico, não tem cabo. Você abre e mede.',
+    icone: 'sache',
   },
   {
     numero: '02',
-    titulo: 'Escova. Filtro. Limpo.',
+    titulo: 'Dilua em 2 L de água fria',
     texto:
-      'A escova não emaranha e o filtro HEPA se limpa sozinho. ' +
-      'Nada de abrir, lavar e esperar secar.',
-    icone: 'filtro',
+      'Balde, água fria, pó por cima. Espere 4 minutos: quando parar de borbulhar ' +
+      'e ficar cinza-azulado, o aspirador está pronto.',
+    icone: 'agua',
   },
   {
     numero: '03',
-    titulo: 'Um clique para esvaziar',
+    titulo: 'Aspire — e depois recolha o pó',
     texto:
-      'A trava solta o depósito inteiro. Você joga fora o que juntou ' +
-      'e guarda o Traclean na estação.',
-    icone: 'lixeira',
+      'A solução aspira a casa inteira em ~40 minutos. No fim, o pó volta a ser pó: ' +
+      'você raspa o coletor e pode reutilizar a mistura até três vezes.',
+    icone: 'aspirador',
   },
 ];
 
 export const MODO_PET = {
   titulo: 'O detalhe que virou promessa',
   texto:
-    'Soltamos um sensor de proximidade que reduz a turbina quando detecta ' +
-    'movimento perto do bocal. Foi a peça que fez o teste passar de ' +
-    '"expulsamos o gato" para "o gato deita no tapete e deixa limpar".',
+    'Pó não ronca. Um aspirador comum faz 74 dB de motor; o Traclean faz o silêncio ' +
+    'de um pano sendo sacudido. E ainda solta aroma de lavanda — que é exatamente ' +
+    'o que segura o gato no cômodo em vez de fazê-lo fugir.',
   bullets: [
-    'Redução automática de turbina ao detectar o pet',
-    'Escova com micro-cortes anti-emaranhado',
-    'Modo Pet fixo em 62 dB, sem ajuste manual',
-    'Bocal largo: não assusta ao aproximar',
+    'Sem motor: o único som é o do pó caindo',
+    'Aroma de lavanda (0,4%) — o gato deita para olhar',
+    'Escova anti-emaranhar que já vem montada na diluição',
+    'Bocal largo: não assusta na aproximação',
   ],
 };
 

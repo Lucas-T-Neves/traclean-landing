@@ -10,6 +10,7 @@ export default function Oferta({ meta, oferta, produto, aoComprar, jaComprou }) 
       <div className={styles.painel}>
         <div className={styles.precoBloco}>
           <Etiqueta tom="lima">{oferta.selo}</Etiqueta>
+          <span className={styles.categoria}>{produto.categoria}</span>
 
           <div className={styles.precos}>
             <span className={styles.de}>{oferta.deFormatado}</span>

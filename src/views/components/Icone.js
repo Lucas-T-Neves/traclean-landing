@@ -59,6 +59,26 @@ const TRACOS = {
       <path d="M9 12l2.2 2.2L15.5 10" />
     </>
   ),
+  sache: (
+    <>
+      <path d="M5 4.5h14l-1.2 15.5H6.2z" />
+      <path d="M5 4.5c2-1.2 4-1.2 6 0 2-1.2 4-1.2 6 0" />
+      <path d="M8.5 11.5h7" />
+    </>
+  ),
+  agua: <path d="M12 3.5s6 6.2 6 10a6 6 0 1 1-12 0c0-3.8 6-10 6-10z" />,
+  reaproveitar: (
+    <>
+      <path d="M20 12a8 8 0 1 1-2.6-5.9" />
+      <path d="M20 4v5h-5" />
+    </>
+  ),
+  tempo: (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 7.5V12l3 2" />
+    </>
+  ),
 };
 
 export default function Icone({ nome, tamanho = 24, className = '', rotulo }) {
