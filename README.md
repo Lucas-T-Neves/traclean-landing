@@ -53,12 +53,17 @@ O fluxo, em uma linha:
 | **Diluição** | 1 sachê (400 g) em 2 L de **água fria** · 4 minutos de reação |
 | **Público-alvo** | Quem tem casa na Terra depois do Impacto — e quem ainda tem um gato em casa |
 | **Preço (fictício)** | R$ 1.299 (de R$ 1.890) · 10x de R$ 129,90 · kit com 3 sachês |
-| **Aparelho (fictício)** | 34 kPa · filtro de sílica 9 · micro-reator de safira (72 h armazenadas) · 2,3 kg |
+| **Aparelho (fictício)** | 34 kPa · filtro de sílica 9 · micro-reator de safira (72 h de carga; 3 ciclos de ~55 min por sachê) · 2,3 kg |
 
 O aparelho que sai da reação tem ficha técnica completa — **capacidades, energia e
 segurança inventadas do zero**: sucção de 34 kPa para detrito vítreo, filtro que segura
 partícula até 0,3 µm, e um reator de safira (o mesmo do Homem de Ferro, em escala de
 bolso) que dispensa tomada, cabo e bateria.
+
+Os dois números de energia não são o mesmo número: **o reator guarda 72 h de carga**
+(energia acumulada, recarregada por indução solar) **e cada sachê sustenta 3 ciclos de
+uso de ~55 min** (o pó não se consome — quem limita o número de ciclos é o sachê, não a
+bateria).
 
 > ⚠️ **Nada aqui é real.** Traclean, VC-9, o Protocolo de Compactação Molecular, o Impacto
 > de Vharn e as avaliações são ficção, criados para a disciplina. A página é um protótipo
@@ -79,7 +84,7 @@ vida (horário de sono, janela favorita, humor do dia). Cheguei a quatro candida
 | **Cartório do Gato** *(primeiro plano)* | Divertido, identidade visual forte | Virou base do ângulo final (o gato que sobrou) |
 | Soneca | Sério, tiers de preço naturais | Mercado concorrido, exigiria copy muito forte |
 | Verdinho | Sustentabilidade + social | Interface pesada (mapa, contadores) para entregar bem em CSS puro |
-| Oráculo do Café | Nonsense, compartilhável | Pouco material para preencher 10 seções obrigatórias |
+| Oráculo do Café | Absurdo, compartilhável | Pouco material para preencher 10 seções obrigatórias |
 
 Aí a ideia virou **produto físico**: um aspirador. E o gancho do Cartório do Gato não
 morreu — virou o ângulo de comunicação. Em vez de vender "25 kPa de sucção" (o que todo
@@ -129,7 +134,7 @@ baixadas **localmente** — a apresentação funciona sem internet.
 | **Edge headless** | Screenshot de conferência visual da página |
 | **jsdom** | Teste automatizado de comportamento (52 verificações) |
 | **Geração de imagem** | **Nenhuma.** As ilustrações são SVG escritos em código, com ajuda de IA (abaixo) |
-| **Wikimedia Commons API** | Download da única foto usada, com licença e autor conferidos |
+| **Wikimedia Commons API** | Download da única foto usada, com a licença conferida |
 
 ### Uso de IA
 
@@ -163,14 +168,14 @@ comportamento. As decisões de produto, de cenário e de copy foram minhas.
 - **Reescrever trechos depois que o design mudou** (por exemplo, trocar todas as fotos
   por ilustrações vetoriais).
 
-#### Onde a IA errou — e o que fizemos
+#### Onde a IA errou — e o que corrigi
 
-| Erro | Como foi detectado | O que fizemos |
+| Erro | Como foi detectado | O que corrigi |
 |---|---|---|
-| Sugeriu `require('...jpg').default` para a imagem | **Só no screenshot.** O teste de DOM passava e o build passava, mas a foto aparecia quebrada | Trocamos pelo import ES, que é a forma idiomática no CRA |
-| Ao reformatar o produto, deixou o prefixo fixo "O aspirador que" no hero e o título veio do model | **Só no screenshot** — o headline virou "O aspirador que Um pó." | Tornamos o headline 100% vindo do model (`tituloAntes` + `tituloDestaque`) |
-| Ao reescrever o componente Hero, sumiu com o bloco de selos (400 g / 2 L / 4 min) | O teste automatizado de contagem acusou zero itens onde havia 3 | Reposto no componente, com teste cobrindo a contagem |
-| Escreveu `.claro .fantasma` num módulo de CSS para estilizar o botão | Revisão manual: cada `*.module.css` tem escopo próprio, então a classe nunca bateria com a do outro arquivo | Trocamos por `color: inherit`, que resolve sem depender de escopo cruzado |
+| Sugeriu `require('...jpg').default` para a imagem | **Só no screenshot.** O teste de DOM passava e o build passava, mas a foto aparecia quebrada | Troquei pelo import ES, que é a forma idiomática no CRA |
+| Ao reformatar o produto, deixou o prefixo fixo "O aspirador que" no hero e o título veio do model | **Só no screenshot** — o headline virou "O aspirador que Um pó." | Tornei o headline 100% vindo do model (`tituloAntes` + `tituloDestaque`) |
+| Ao reescrever o componente Hero, sumiu com o bloco de selos (400 g / 2 L / 4 min) | O teste automatizado de contagem acusou zero itens onde havia 3 | Recolocado no componente, com teste cobrindo a contagem |
+| Escreveu `.claro .fantasma` num módulo de CSS para estilizar o botão | Revisão manual: cada `*.module.css` tem escopo próprio, então a classe nunca bateria com a do outro arquivo | Troquei por `color: inherit`, que resolve sem depender de escopo cruzado |
 | Deixou import não usado no `Modal` | O próprio build recusou (`eslint: 'Icone' is defined but never used`) com `CI=true` | Removido e rebuild |
 | Introduziu palavras corrompidas em textos (uma palavra em chinês num depoimento, um "remained" solto no meio de português e palavras coladas como "paraCarpete") | Varredura de caracteres não latinos e de palavras inglesas suspeitas nos arquivos | Corrigido ponto a ponto; a varredura virou parte do checklist |
 | Propôs `localStorage`, dark mode e biblioteca de animação | Revisão de escopo | **Descartado na entrega**: a atividade pede para não usar recursos que não foram vistos em aula (o `localStorage` volta como melhoria, em "O que faria diferente") |
@@ -214,7 +219,7 @@ a Terra coberta de pó que não sai. E o pó ganhou dono: a **Stark Industries**
 Protocolo de Compactação Molecular como tecnologia e o micro-reator de safira (o mesmo
 do Homem de Ferro) como energia do aparelho. A pitada de referência em universo de
 super-heróis também resolveu um problema prático: o **modelo do aparelho ganhou nome e ficha
-técnica** (VC-9, 34 kPa, 72 h, filtro de sílica 9), e a página ficou com muito mais
+técnica** (VC-9, 34 kPa, reator de 72 h de carga, filtro de sílica 9), e a página ficou com muito mais
 material para as seções obrigatórias.
 
 O que mudou em cada lugar da página:
@@ -222,7 +227,7 @@ O que mudou em cada lugar da página:
 | Antes (aparelho) | Depois (pó) | Hoje (pó + Stark + Impacto) |
 |---|---|---|
 | Chega montado | Chega em sachê de 400 g | Chega em sachê de 400 g (PCM sob licença Stark) |
-| 62 dB por isolação acústica | Sem motor: silêncio de pano sacudido | Sem motor + reator de safira (72 h) |
+| 62 dB por isolação acústica | Sem motor: silêncio de pano sacudido | Sem motor + reator de safira (72 h de carga) |
 | 45 min de bateria | 1 sachê ≈ 55 min por ciclo | 1 sachê = **3 ciclos** de ~55 min |
 | "Como funciona": uso | 3 passos (rasgar, diluir, aspirar) | **4 passos** (rasgar, diluir, esperar a reação, aspirar) |
 | Oferta: 1 aparelho | Oferta: kit com 3 sachês | Kit com 3 sachês + balde + **licença Stark** |
@@ -240,7 +245,7 @@ que o produto é um pó que precisa ser diluído, a página falhou ali mesmo.
 Esta foi a decisão mais importante do projeto, e ela nasceu de **duas tentativas
 fracassadas de imagem**:
 
-1. **Primeira tentativa (picsum)**: baixamos seis fotos "de ambiente". Ao abrir os
+1. **Primeira tentativa (picsum)**: baixei seis fotos "de ambiente". Ao abrir os
    arquivos para conferir, eram aleatórias: um bule de chá rotulado "sala" e fardos de
    feno rotulados "gato". Descartado na hora — sem verificação visual, eu teria
    publicado uma página com uma fazenda na seção de depoimentos.
@@ -270,7 +275,7 @@ não credita ninguém nominalmente por essa foto.
 
 ### Resultado final
 
-**Como avaliamos**
+**Como avaliei**
 
 O build de produção fecha em **~60 kB de JavaScript + 6 kB de CSS** (gzip), sem
 dependências além do React. O teste automatizado roda **52 verificações** — render das
@@ -280,7 +285,7 @@ extra que garante que o conceito do pó (diluição, reação, sachê, VC-9) est
 hero, contexto, passos, aparelho, FAQ e oferta.
 
 O que mais me surpreendeu foi o quanto a **revisão visual** rendeu: os piores bugs do
-projeto (foto quebrada, headline quebrado, selos sumidos) só apareceram quando olhamos a
+projeto (foto quebrada, headline quebrado, selos sumidos) só apareceram quando olhei a
 página renderizada. Código que compila não é código que funciona.
 
 **O que faria diferente, com mais tempo**
@@ -401,10 +406,13 @@ usuário confirma ─────────────┘
   ferramenta de geração de imagem foi usada).
 - **Fontes**: Inter e Space Grotesk, SIL Open Font License 1.1.
 - **Dependências**: React (MIT), react-scripts (MIT).
-- **Stark Industries, o Homem de Ferro, os Vingadores e o Impacto de Vharn** são
+- **Stark Industries, o Homem de Ferro (Tony Stark), os Vingadores e o Estalo** são
   personagens e eventos da Marvel/Disney. Aparecem aqui como tempero narrativo de uma
   landing page fictícia, em uso acadêmico e sem qualquer fim comercial; a página não é
   afiliada, patrocinada ou endossada pela Marvel ou pela Disney.
+- **O Impacto de Vharn, a esquadra remanescente, o Protocolo de Compactação Molecular, a
+  Traclean e o VC-9 são invenções originais deste projeto** — não existem em nenhuma obra,
+  filme ou série.
 
 > Lembrete: **Traclean é um produto fictício.** Preços, avaliações e garantias não
 > correspondem a nada real. Nenhum dado enviado nesta página sai do seu navegador.
