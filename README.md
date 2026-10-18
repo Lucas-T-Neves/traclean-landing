@@ -3,6 +3,18 @@
 > *Pó. Água. Aparelho.*
 > Landing page de um produto fictício, criada como **Atividade 01** da disciplina.
 
+**Em 5 linhas:** depois do Impacto de Vharn, a Terra ficou coberta de pó que não sai.
+A Stark Industries (a mesma do Homem de Ferro) criou o **Protocolo de Compactação
+Molecular**: um pó que, diluído em água, reconstrói o equipamento. A Traclean vende
+esse pó — **400 g em sachê + 2 L de água fria = um aspirador VC-9 inteiro em 4 minutos**,
+sem tomada, sem cabo e sem fábrica. Página 100% client-side, em **React + MVVM + CSS
+Modules**, com checkout simulado funcional. Os dados são todos fictícios.
+
+```
+1 sachê (400 g)  +  2 L de água fria  =  Reação PCM (4 min)  →  Traclean VC-9
+    de Pó Compactador      em um balde        a matéria se refaz      aspirador inteiro
+```
+
 ---
 
 ## Integrantes
@@ -115,7 +127,7 @@ baixadas **localmente** — a apresentação funciona sem internet.
 | **OpenCode** | Agente de IA que escreveu boa parte do código com revisão guiada |
 | **Node.js 24 / npm 11** | Ambiente de execução e instalação |
 | **Edge headless** | Screenshot de conferência visual da página |
-| **jsdom** | Teste automatizado de comportamento (58 verificações) |
+| **jsdom** | Teste automatizado de comportamento (52 verificações) |
 | **Geração de imagem** | **Nenhuma.** As ilustrações são SVG escritos à mão (abaixo) |
 | **Wikimedia Commons API** | Download da única foto usada, com licença e autor conferidos |
 
@@ -255,7 +267,7 @@ público, sem exigência de atribuição — mas creditada mesmo assim).
 **Como avaliamos**
 
 O build de produção fecha em **~60 kB de JavaScript + 6 kB de CSS** (gzip), sem
-dependências além do React. O teste automatizado roda **58 verificações** — render das
+dependências além do React. O teste automatizado roda **52 verificações** — render das
 seções, contagem de itens, preço e desconto, acordeão, modal, validação **bloqueando** o
 envio vazio, confirmação gerando código de pedido, CTA trocando de estado e uma camada
 extra que garante que o conceito do pó (diluição, reação, sachê, VC-9) está explícito em
@@ -287,6 +299,24 @@ npm run build   # gera a versão de produção em /build
 ```
 
 Requer Node 18 ou superior (testado com Node 24).
+
+## Como verificar
+
+O projeto traz dois scripts de conferência — rodam sem instalar nada além do `npm install`:
+
+```bash
+npm run build          # gera a versão de produção
+npm run auditar        # auditoria de estrutura, CSS, ícones, ficção, README e contraste
+npm run testar         # abre a build num DOM real e confere as 52 checagens de comportamento
+```
+
+| Script | O que faz |
+|---|---|
+| `scripts/auditoria.mjs` | Confere as 10 seções obrigatórias, se o menu aponta para seções que existem, se toda classe de CSS Module usada no JS existe no CSS, se todo ícone referenciado existe, se a ficção do produto se contradiz, se o README tem todos os headings do modelo da atividade e se os pares de cor passam em contraste WCAG AA. |
+| `scripts/testes-comportamento.mjs` | Sobe a build, abre num DOM real (jsdom) e verifica o que o usuário vê: as seções, a receita do produto, o FAQ abrindo e fechando, o checkout bloqueando envio vazio e gerando o pedido fictício, e o CTA mudando de "Comprar" para "Ver meu pedido". |
+
+Os dois scripts imprimem `TUDO TRUE` quando não há pendência — é assim que as afirmações
+deste README podem ser conferidas em vez de acreditadas.
 
 ## Estrutura do projeto (MVVM)
 
