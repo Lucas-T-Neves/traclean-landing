@@ -23,13 +23,17 @@
   border: 1px solid rgba(36, 55, 79, 0.18);
 }
 
+.info {
+  min-width: 0;
+}
+
 .titulo {
   margin: 16px 0 0;
   font-size: clamp(30px, 4vw, 46px);
 }
 
 .modelo {
-  color: var(--lima-esc);
+  color: var(--lima-texto);
 }
 
 .tagline {
@@ -96,7 +100,7 @@
   width: 7px;
   height: 7px;
   border-radius: 2px;
-  background: var(--lima-esc);
+  background: var(--lima-texto);
 }
 
 .ficha {

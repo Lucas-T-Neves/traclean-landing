@@ -24,8 +24,9 @@ export const FAQ = [
     id: 'f3',
     pergunta: 'Quanto rende um sachê?',
     resposta:
-      'Um sachê forma um aparelho completo, com cerca de 55 minutos de aspiração por ' +
-      'ciclo. O kit vem com 3 sachês, ou seja, 3 aparelhos — um por cômodo, se quiser.',
+      'Um sachê forma um aparelho completo, que aguenta 3 ciclos de cerca de 55 minutos ' +
+      'de aspiração — o pó não se consome. O kit vem com 3 sachês, ou seja, 3 aparelhos: ' +
+      'um por cômodo, se quiser.',
   },
   {
     id: 'f4',

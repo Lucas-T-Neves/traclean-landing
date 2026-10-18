@@ -17,14 +17,3 @@
   border: 1px solid rgba(198, 242, 78, 0.5);
 }
 
-.escuro {
-  background: rgba(198, 242, 78, 0.14);
-  color: var(--lima-claro);
-  border: 1px solid rgba(198, 242, 78, 0.35);
-}
-
-.grafite {
-  background: rgba(11, 19, 32, 0.06);
-  color: var(--grafite);
-  border: 1px solid rgba(11, 19, 32, 0.12);
-}

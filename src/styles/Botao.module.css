@@ -41,16 +41,6 @@
   box-shadow: 0 14px 30px rgba(11, 19, 32, 0.24);
 }
 
-.secundario {
-  background: var(--lima);
-  color: var(--grafite);
-}
-
-.secundario:hover {
-  background: var(--lima-claro);
-  transform: translateY(-2px);
-}
-
 /* "fantasma" herda a cor do texto da secao em que aparece (por isso color: inherit):
    CSS Modules dao escopo proprio a cada arquivo, entao nao dá para estilizar
    o botao a partir de uma classe de OUTRO modulo (.claro da Secao, por exemplo). */

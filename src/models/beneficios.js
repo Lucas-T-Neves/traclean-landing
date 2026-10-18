@@ -39,10 +39,10 @@ export const BENEFICIOS = [
   {
     id: 'ciclo',
     icone: 'reaproveitar',
-    titulo: 'Um sachê, um ciclo inteiro',
+    titulo: 'Um sachê, três ciclos',
     texto:
-      '400 g rendem ~55 min de aspiração completa. Terminou, o pó se reconstitui no ' +
-      'filtro: dá para guardar o material e usar de novo.',
+      'O pó não se consome: ele é o material que vira aparelho. Um sachê renderiza ' +
+      '3 ciclos de ~55 min — entre eles, basta lavar o filtro e recomeçar.',
   },
   {
     id: 'garantia',

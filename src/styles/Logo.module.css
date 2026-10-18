@@ -11,7 +11,7 @@
 .simbolo {
   width: 30px;
   height: 30px;
-  color: var(--lima-esc);
+  color: var(--lima-texto);
   flex: 0 0 auto;
 }
 

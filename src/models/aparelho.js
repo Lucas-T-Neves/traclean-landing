@@ -28,8 +28,8 @@ export const APARELHO = {
     { rotulo: 'Fluxo', valor: '1,2 L de deposito · esvazia em 1 clique' },
     { rotulo: 'Filtro', valor: 'Malha Silicia-9 · 99,97% de particulas ate 0,3 um' },
     { rotulo: 'Alcance', valor: 'Detrito vitreo, areia de abobada e po metalica' },
-    { rotulo: 'Ciclo', valor: '1 sache = 1 ciclo completo de ~55 min' },
-    { rotulo: 'Reuso', valor: 'Apos o uso, o po se reconstitui no filtro' },
+    { rotulo: 'Ciclo', valor: '1 sachê = 3 ciclos de ~55 min' },
+    { rotulo: 'Reuso', valor: 'O pó não se consome: filtre e lave o filtro para recomeçar' },
   ],
 
   energia: [

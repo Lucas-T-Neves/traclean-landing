@@ -8,6 +8,7 @@ export const NAV = [
   { id: 'mundo', rotulo: 'O mundo' },
   { id: 'aparelho', rotulo: 'O VC-9' },
   { id: 'beneficios', rotulo: 'Por que funciona' },
+  { id: 'galeria', rotulo: 'Do pó ao aparelho' },
   { id: 'como-funciona', rotulo: 'Como funciona' },
   { id: 'avaliacoes', rotulo: 'Avaliações' },
   { id: 'oferta', rotulo: 'Oferta' },

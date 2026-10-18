@@ -73,6 +73,10 @@
   font-size: 15px;
 }
 
+.formulario {
+  display: block;
+}
+
 .campos {
   display: grid;
   gap: 16px;
@@ -103,8 +107,8 @@
 
 .input:focus {
   outline: none;
-  border-color: var(--lima-esc);
-  box-shadow: 0 0 0 3px rgba(168, 212, 47, 0.25);
+  border-color: var(--lima-texto);
+  box-shadow: 0 0 0 3px rgba(74, 103, 0, 0.18);
 }
 
 .inputErro {
@@ -132,7 +136,7 @@
   width: 18px;
   height: 18px;
   margin-top: 2px;
-  accent-color: var(--lima-esc);
+  accent-color: var(--lima-texto);
 }
 
 .acoes {

@@ -1,4 +1,4 @@
-# Traclean Pro Pet
+# Traclean
 
 > *Pó. Água. Aparelho.*
 > Landing page de um produto fictício, criada como **Atividade 01** da disciplina.
@@ -207,7 +207,7 @@ O que mudou em cada lugar da página:
 |---|---|---|
 | Chega montado | Chega em sachê de 400 g | Chega em sachê de 400 g (PCM sob licença Stark) |
 | 62 dB por isolação acústica | Sem motor: silêncio de pano sacudido | Sem motor + reator de safira (72 h) |
-| 45 min de bateria | 400 g de pó = 2 L ≈ 40 min | 1 sachê = 1 ciclo de ~55 min |
+| 45 min de bateria | 1 sachê ≈ 55 min por ciclo | 1 sachê = **3 ciclos** de ~55 min |
 | "Como funciona": uso | 3 passos (rasgar, diluir, aspirar) | **4 passos** (rasgar, diluir, esperar a reação, aspirar) |
 | Oferta: 1 aparelho | Oferta: kit com 3 sachês | Kit com 3 sachês + balde + **licença Stark** |
 | Ficha técnica de motor | Composição e rendimento do pó | **Duas fichas**: a do material e a do aparelho |

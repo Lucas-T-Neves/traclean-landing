@@ -38,7 +38,7 @@ export const PRODUTO = {
     { rotulo: 'Diluição', valor: '1 sachê (400 g) para 2 L de água fria' },
     { rotulo: 'Tempo de reação', valor: '4 minutos · trava térmica em 6' },
     { rotulo: 'Resultado', valor: '1 aparelho Traclean VC-9 completo' },
-    { rotulo: 'Rendimento', valor: '~55 min de aspiração por ciclo' },
+    { rotulo: 'Rendimento', valor: '3 ciclos de ~55 min por sachê (o pó não se consome)' },
     { rotulo: 'Peso enviado', valor: '400 g em vez de 14 kg de aspirador' },
   ],
 };

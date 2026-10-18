@@ -12,6 +12,8 @@
   --linha: #24374f;
   --lima: #c6f24e;
   --lima-esc: #a8d42f;
+  /* Lima escuro para texto/icones sobre fundo claro (AA: 5.97:1). */
+  --lima-texto: #4a6700;
   --lima-claro: #e7fbb8;
   --off: #f4f6f1;
   --off-2: #e9ede4;
@@ -91,7 +93,7 @@ dl {
 
 /* acessibilidade: foco visivel e link de escape */
 :focus-visible {
-  outline: 3px solid var(--lima-esc);
+  outline: 3px solid var(--lima-texto);
   outline-offset: 3px;
   border-radius: 6px;
 }

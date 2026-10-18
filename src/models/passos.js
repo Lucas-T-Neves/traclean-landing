@@ -33,8 +33,8 @@ export const PASSOS = [
     numero: '04',
     titulo: 'Aspire a poeira do Impacto',
     texto:
-      '34 kPa, filtro de sílica 9 e 72 h de reator próprio. Um ciclo inteiro de ' +
-      'aspiração, sem tomada e sem cabo na parede.',
+      '34 kPa, filtro de sílica 9 e 72 h de reator próprio. São 3 ciclos de ' +
+      '~55 min, sem tomada e sem cabo na parede.',
     icone: 'aspirador',
   },
 ];
