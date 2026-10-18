@@ -57,8 +57,9 @@ export const FAQ = [
     id: 'f7',
     pergunta: 'Precisa de tomada, cabo ou bateria?',
     resposta:
-      'Não. O VC-9 sai do balde com micro-reator de safira já acionado: 72 horas de ' +
-      'operação contínua e recarga por indução solar em 4 horas de sol direto.',
+      'Não. O VC-9 sai do balde com micro-reator de safira já acionado. O reator ' +
+      'armazena 72 h de energia e recarrega por indução solar em 4 horas de sol direto — ' +
+      'mas o que limita o uso é o pó: com 1 sachê você tem 3 ciclos de cerca de 55 minutos.',
   },
   {
     id: 'f8',

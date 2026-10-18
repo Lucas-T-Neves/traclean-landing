@@ -3,8 +3,8 @@
 > *Pó. Água. Aparelho.*
 > Landing page de um produto fictício, criada como **Atividade 01** da disciplina.
 
-**Em 5 linhas:** depois do Impacto de Vharn, a Terra ficou coberta de pó que não sai.
-A Stark Industries (a mesma do Homem de Ferro) criou o **Protocolo de Compactação
+**Resumo:** depois do Impacto de Vharn, a Terra ficou coberta de pó que não sai.
+A Stark Industries criou o **Protocolo de Compactação
 Molecular**: um pó que, diluído em água, reconstrói o equipamento. A Traclean vende
 esse pó — **400 g em sachê + 2 L de água fria = um aspirador VC-9 inteiro em 4 minutos**,
 sem tomada, sem cabo e sem fábrica. Página 100% client-side, em **React + MVVM + CSS
@@ -30,9 +30,9 @@ Modules**, com checkout simulado funcional. Os dados são todos fictícios.
 O cenário é pós-apocalíptico alienígena. Primeiro veio o **Estalo** — metade do
 planeta sumiu com um único estalar de dedos e os Vingadores desapareceram junto.
 Depois veio o **Impacto de Vharn**: a esquadra que sobrou voltou para terminar o serviço
-e pulverizou o continente de sílica vítrea, areia de abóbada e pó metálica.
+e pulverizou o continente de sílica vítrea, areia de abóbada e pó metálico.
 
-Para essa terra, a **Stark Industries** — a mesma do Homem de Ferro — desenvolveu o
+Para essa Terra, a **Stark Industries** desenvolveu o
 **Protocolo de Compactação Molecular (PCM)**: um material em pó que, dissolvido em água,
 *reconstrói a própria matéria* no formato de um equipamento. A Traclean produz e licencia
 esse pó. **A química é da Stark, o produto é nosso.**
@@ -51,9 +51,9 @@ O fluxo, em uma linha:
 | **Categoria** | Pó de PCM sob licença Stark Industries (a empresa do Homem de Ferro) |
 | **Formato** | Sachê de papel impermeável, 400 g de pó, sem plástico |
 | **Diluição** | 1 sachê (400 g) em 2 L de **água fria** · 4 minutos de reação |
-| **Público-alvo** | Quem tem casa na Terra depois do Impacto — e, no caso do pet, um gato que sobrou |
-| **Preço (fictício)** | R$ 1.299 (de R$ 1.890) · 12x de R$ 129,90 · kit com 3 sachês |
-| **Aparelho (fictício)** | 34 kPa · filtro de sílica 9 · micro-reator de safira · 72 h · 2,3 kg |
+| **Público-alvo** | Quem tem casa na Terra depois do Impacto — e quem ainda tem um gato em casa |
+| **Preço (fictício)** | R$ 1.299 (de R$ 1.890) · 10x de R$ 129,90 · kit com 3 sachês |
+| **Aparelho (fictício)** | 34 kPa · filtro de sílica 9 · micro-reator de safira (72 h armazenadas) · 2,3 kg |
 
 O aparelho que sai da reação tem ficha técnica completa — **capacidades, energia e
 segurança inventadas do zero**: sucção de 34 kPa para detrito vítreo, filtro que segura
@@ -72,22 +72,22 @@ bolso) que dispensa tomada, cabo e bateria.
 
 A primeira proposta de produto era uma landing page de um app fictício chamado
 **Cartório do Gato** — um serviço em que o gato emitia um extrato mensal da própria
-vida (horário de sono, janela favorita, humor do dia). Chegamos a quatro candidatos:
+vida (horário de sono, janela favorita, humor do dia). Cheguei a quatro candidatos:
 
 | Ideia | Ângulo | Por que ficou de fora |
 |---|---|---|
 | **Cartório do Gato** *(primeiro plano)* | Divertido, identidade visual forte | Virou base do ângulo final (o gato que sobrou) |
 | Soneca | Sério, tiers de preço naturais | Mercado concorrido, exigiria copy muito forte |
 | Verdinho | Sustentabilidade + social | Interface pesada (mapa, contadores) para entregar bem em CSS puro |
-| Oracle do Café | Nonsense, compartilhável | Pouco material para preencher 10 seções obrigatórias |
+| Oráculo do Café | Nonsense, compartilhável | Pouco material para preencher 10 seções obrigatórias |
 
 Aí a ideia virou **produto físico**: um aspirador. E o gancho do Cartório do Gato não
 morreu — virou o ângulo de comunicação. Em vez de vender "25 kPa de sucção" (o que todo
-concorrente promete), a passou a vender **uma situação específica**.
+concorrente promete), a Traclean passou a vender **uma situação específica**.
 
 ### Pesquisa e referências
 
-**O que pesquisamos**
+**O que pesquisei**
 
 - **Landing pages de produto** para entender a ordem das seções que converte:
   hero → benefício → prova social → oferta → FAQ.
@@ -95,9 +95,9 @@ concorrente promete), a passou a vender **uma situação específica**.
   páginas usam como argumento de venda. Conclusão: potência é commodity — o que
   diferencia é o que a página faz com o dado.
 - **Ficção científica e universo de super-heróis**: o clichê de "empresa bilionária
-  resolve o problema da humanidade depois de um desastre" (Stark, Stark Industries,
-  o Homem de Ferro) é um recurso narrativo conhecido, e usamos isso a favor: dá um
-  motivo de crível para a tecnologia existir no mundo do produto.
+  resolve o problema da humanidade depois de um desastre" (a Stark, no cinema) é um
+  recurso narrativo conhecido, e usei isso a favor: dá um motivo crível para a
+  tecnologia existir no mundo do produto.
 - **Acessibilidade**: WCAG em foco visível, navegação por teclado e semântica de
   headings, para a página não depender só do visual.
 - **CSS Modules** no React: como o `create-react-app` compila `*.module.css` e por que
@@ -128,12 +128,12 @@ baixadas **localmente** — a apresentação funciona sem internet.
 | **Node.js 24 / npm 11** | Ambiente de execução e instalação |
 | **Edge headless** | Screenshot de conferência visual da página |
 | **jsdom** | Teste automatizado de comportamento (52 verificações) |
-| **Geração de imagem** | **Nenhuma.** As ilustrações são SVG escritos à mão (abaixo) |
+| **Geração de imagem** | **Nenhuma.** As ilustrações são SVG escritos em código, com ajuda de IA (abaixo) |
 | **Wikimedia Commons API** | Download da única foto usada, com licença e autor conferidos |
 
 ### Uso de IA
 
-Esta parte merece atenção, porque **usamos IA de verdade** e ela errou várias vezes.
+Esta parte merece atenção, porque **usei IA de verdade** e ela errou várias vezes.
 Contar só o que deu certo seria uma versão mentirosa do projeto.
 
 #### Modelos e agentes
@@ -148,7 +148,7 @@ Contar só o que deu certo seria uma versão mentirosa do projeto.
 O objetivo não era "gerar uma landing page" e pronto — a atividade pede que o README
 registre **decisões**. A IA funcionou melhor aqui como **par de programação e revisão**
 do que como geradora de texto criativo: produziu estrutura, achou erro e conferiu
-comportamento. As decisões de produto, de cenário e de copy foram nossas.
+comportamento. As decisões de produto, de cenário e de copy foram minhas.
 
 #### Onde a IA ajudou
 
@@ -157,7 +157,7 @@ comportamento. As decisões de produto, de cenário e de copy foram nossas.
 - **Achar bugs que o olho não pega.** O melhor caso foi o acordeão do FAQ: havia um erro
   real (`abertaId === item.aberta` em vez de `item.id`) que fazia a FAQ nunca abrir.
   Compilava e não dava erro no console — só o teste automatizado acusou.
-- **Checagem de comportamento por script**: 58 asserções cobrindo render, contagem de
+- **Checagem de comportamento por script**: 52 asserções cobrindo render, contagem de
   itens, formato de preço, parcelamento, desconto, acordeão, validação do checkout,
   confirmação do pedido e troca de estado do CTA.
 - **Reescrever trechos depois que o design mudou** (por exemplo, trocar todas as fotos
@@ -167,13 +167,16 @@ comportamento. As decisões de produto, de cenário e de copy foram nossas.
 
 | Erro | Como foi detectado | O que fizemos |
 |---|---|---|
-| Sugestou `require('...jpg').default` para a imagem | **Só no screenshot.** O teste de DOM passava e o build passava, mas a foto aparecia quebrada | Trocamos pelo import ES, que é a forma idiomática no CRA |
-| Ao reformatar o produto, deixou o prefixo fixo "O aspirador que" no hero e o título veio do model | **Só no screenshot** — o headline virou "O aspirador que Um pó.." | Tornamos o headline 100% vindo do model (`tituloAntes` + `tituloDestaque`) |
+| Sugeriu `require('...jpg').default` para a imagem | **Só no screenshot.** O teste de DOM passava e o build passava, mas a foto aparecia quebrada | Trocamos pelo import ES, que é a forma idiomática no CRA |
+| Ao reformatar o produto, deixou o prefixo fixo "O aspirador que" no hero e o título veio do model | **Só no screenshot** — o headline virou "O aspirador que Um pó." | Tornamos o headline 100% vindo do model (`tituloAntes` + `tituloDestaque`) |
 | Ao reescrever o componente Hero, sumiu com o bloco de selos (400 g / 2 L / 4 min) | O teste automatizado de contagem acusou zero itens onde havia 3 | Reposto no componente, com teste cobrindo a contagem |
 | Escreveu `.claro .fantasma` num módulo de CSS para estilizar o botão | Revisão manual: cada `*.module.css` tem escopo próprio, então a classe nunca bateria com a do outro arquivo | Trocamos por `color: inherit`, que resolve sem depender de escopo cruzado |
 | Deixou import não usado no `Modal` | O próprio build recusou (`eslint: 'Icone' is defined but never used`) com `CI=true` | Removido e rebuild |
-| Introduziu palavras corrompidas em textos (uma palavra em chinês num depoimento, "remained" no meio de português, glued words como "paraCarpete") | Varredura de caracteres não latinos e de palavras inglesas suspeitas nos arquivos | Corrigido ponto a ponto; a varredura virou parte do checklist |
-| Propôs `localStorage`, dark mode e biblioteca de animação | Revisão de escopo | **Descartado**: a atividade pede para não usar recursos que não foram vistos em aula |
+| Introduziu palavras corrompidas em textos (uma palavra em chinês num depoimento, um "remained" solto no meio de português e palavras coladas como "paraCarpete") | Varredura de caracteres não latinos e de palavras inglesas suspeitas nos arquivos | Corrigido ponto a ponto; a varredura virou parte do checklist |
+| Propôs `localStorage`, dark mode e biblioteca de animação | Revisão de escopo | **Descartado na entrega**: a atividade pede para não usar recursos que não foram vistos em aula (o `localStorage` volta como melhoria, em "O que faria diferente") |
+
+> As expressões estranhas citadas nessa linha — "remained" e palavras coladas — aparecem
+> aqui **como exemplo do tipo de erro** que a IA introduziu; nenhuma delas está no código.
 
 #### Sugestões mantidas, alteradas e descartadas
 
@@ -185,7 +188,8 @@ comportamento. As decisões de produto, de cenário e de copy foram nossas.
   virou pó e virou **9** quando entraram a Stark e a ficha do aparelho.
 - **Descartadas**: dark mode (fora de escopo), biblioteca de animação (regra da
   atividade), `localStorage` (complexidade sem ganho) e a ideia de comprar foto de banco
-  de imagens para o produto (explicada abaixo).
+  de imagens para o produto (explicada em
+  "A maior mudança: de foto para ilustração vetorial").
 
 ### Evolução da solução
 
@@ -205,17 +209,17 @@ A primeira versão do pó era um conceito em si: "um pó que vira aspirador". Fu
 piada, mas faltava um **mundo**. Um pó sem motivo não tem história — o visitante lia a
 página e não entendia por que aquilo existiria.
 
-Então a história ganhou cenario: o **Estalo**, os Vingadores, o **Impacto de Vharn** e
-a Terra coberta de po que não sai. E o pó ganhou dono: a **Stark Industries**, com o
+Então a história ganhou cenário: o **Estalo**, os Vingadores, o **Impacto de Vharn** e
+a Terra coberta de pó que não sai. E o pó ganhou dono: a **Stark Industries**, com o
 Protocolo de Compactação Molecular como tecnologia e o micro-reator de safira (o mesmo
-do Homem de Ferro) como energia do aparelho. A pitada de referência em universe of
-heróis também resolveu um problema prático: o **modelo do aparelho ganhou nome e ficha
+do Homem de Ferro) como energia do aparelho. A pitada de referência em universo de
+super-heróis também resolveu um problema prático: o **modelo do aparelho ganhou nome e ficha
 técnica** (VC-9, 34 kPa, 72 h, filtro de sílica 9), e a página ficou com muito mais
 material para as seções obrigatórias.
 
 O que mudou em cada lugar da página:
 
-| Antes (aparelho) |Depois (pó) | Hoje (pó + Stark + Impacto) |
+| Antes (aparelho) | Depois (pó) | Hoje (pó + Stark + Impacto) |
 |---|---|---|
 | Chega montado | Chega em sachê de 400 g | Chega em sachê de 400 g (PCM sob licença Stark) |
 | 62 dB por isolação acústica | Sem motor: silêncio de pano sacudido | Sem motor + reator de safira (72 h) |
@@ -238,7 +242,7 @@ fracassadas de imagem**:
 
 1. **Primeira tentativa (picsum)**: baixamos seis fotos "de ambiente". Ao abrir os
    arquivos para conferir, eram aleatórias: um bule de chá rotulado "sala" e fardos de
-   feno rotulados "gato". Descartado na hora — sem verificação visual, teríamos
+   feno rotulados "gato". Descartado na hora — sem verificação visual, eu teria
    publicado uma página com uma fazenda na seção de depoimentos.
 2. **Segunda tentativa (Wikimedia Commons, busca por palavra-chave)**: a API funciona e
    devolve licença e autor. Mas "vacuum cleaner" no Commons retornou uma **válvula
@@ -251,7 +255,9 @@ A conclusão foi a mais honesta do projeto: **o produto é fictício, então nã
 Então o produto inteiro (sachê, balde de reação, aparelho e filtro) foi desenhado em
 **SVG dentro do próprio código**, no mesmo traço da identidade visual. Sobrou apenas
 **uma foto real**: o gato do bloco de reação, do Wikimedia Commons sob **CC0** (domínio
-público, sem exigência de atribuição — mas creditada mesmo assim).
+público, sem exigência de atribuição). A licença foi conferida pela API antes do download,
+mas o arquivo não guarda metadado de autor nem a URL de origem — então o repositório
+não credita ninguém nominalmente por essa foto.
 
 #### Erros encontrados depois de pronto
 
@@ -273,14 +279,14 @@ envio vazio, confirmação gerando código de pedido, CTA trocando de estado e u
 extra que garante que o conceito do pó (diluição, reação, sachê, VC-9) está explícito em
 hero, contexto, passos, aparelho, FAQ e oferta.
 
-O que mais nos surpreendeu foi o quanto a **revisão visual** rendeu: os piores bugs do
+O que mais me surpreendeu foi o quanto a **revisão visual** rendeu: os piores bugs do
 projeto (foto quebrada, headline quebrado, selos sumidos) só apareceram quando olhamos a
 página renderizada. Código que compila não é código que funciona.
 
-**O que faríamos diferente, com mais tempo**
+**O que faria diferente, com mais tempo**
 
-1. **Testes no repositório** (React Testing Library), para a validação do checkout deixar de
-   viver num script externo.
+1. **Testes no repositório** (React Testing Library), para a validação do checkout deixar
+   de depender do `scripts/testes-comportamento.mjs` e virar suíte junto do código.
 2. **Persistir o pedido** em `localStorage`, para o "Ver meu pedido" continuar funcionando
    depois de recarregar a página.
 3. **Um diagrama da reação** (do pó ao aparelho) em etapas ilustradas, em vez de depender
@@ -376,8 +382,8 @@ usuário confirma ─────────────┘
 
 ## Decisões técnicas em uma frase cada
 
-- **MVVM em vez de FSD** — a página tem uma única entidade de domínio; FSD seria
-  ceremony sem ganho.
+- **MVVM em vez de FSD** (Feature-Sliced Design) — a página tem uma única entidade de
+  domínio; FSD seria burocracia sem ganho.
 - **CSS Modules em vez de CSS global** — cada seção tem seu arquivo, e só uma camada de
   regras globais (os tokens em `index.css`).
 - **SVG em vez de foto do produto** — produto fictício não tem foto; e a ilustração fica
@@ -388,13 +394,17 @@ usuário confirma ─────────────┘
 
 ## Créditos e licenças
 
-- **Foto do gato**: Wikimedia Commons, licença **CC0** (domínio público). Autoria e
-  licença conferidas via API antes do download.
-- **Ilustrações**: vetores autorais deste repositório (nenhuma IA de imagem foi usada).
+- **Foto do gato**: Wikimedia Commons, licença **CC0** (domínio público). A licença foi
+  conferida via API antes do download; o arquivo não guarda autor nem URL de origem, então
+  não há crédito nominal a fazer.
+- **Ilustrações**: SVG escritos em código neste repositório, com ajuda de IA (nenhuma
+  ferramenta de geração de imagem foi usada).
 - **Fontes**: Inter e Space Grotesk, SIL Open Font License 1.1.
 - **Dependências**: React (MIT), react-scripts (MIT).
 - **Stark Industries, o Homem de Ferro, os Vingadores e o Impacto de Vharn** são
-  referências de ficção, usadas apenas como flavor narrativo desta landing page fictícia.
+  personagens e eventos da Marvel/Disney. Aparecem aqui como tempero narrativo de uma
+  landing page fictícia, em uso acadêmico e sem qualquer fim comercial; a página não é
+  afiliada, patrocinada ou endossada pela Marvel ou pela Disney.
 
 > Lembrete: **Traclean é um produto fictício.** Preços, avaliações e garantias não
 > correspondem a nada real. Nenhum dado enviado nesta página sai do seu navegador.

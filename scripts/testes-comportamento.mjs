@@ -96,7 +96,7 @@ checar('depoimento ex-Vingador', /Ex-Vingador/.test(texto()));
 
 checar('oferta: preco', texto().includes('R$ 1.299') && texto().includes('R$ 1.890'));
 checar('oferta: desconto 31%', texto().includes('31%'));
-checar('oferta: parcelamento', texto().includes('12x de R$ 129,90'));
+checar('oferta: parcelamento', texto().includes('10x de R$ 129,90'));
 checar('oferta: kit com 3 saches', /3 sachês de Pó Compactador/.test(texto()));
 checar('oferta: licenca Stark', /Licença Stark Industries/.test(texto()));
 checar('oferta: ficha do material', qa('#oferta dl > div').length === 6);

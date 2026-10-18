@@ -11,12 +11,13 @@ export const OFERTA = {
   precoFormatado: 'R$ 1.299',
   de: 1890,
   deFormatado: 'R$ 1.890',
-  parcelas: 12,
+  // 10 x 129,90 = 1.299,00: o parcelamento fecha exatamente no preco, sem sobra.
+  parcelas: 10,
   valorParcela: 129.9,
   valorParcelaFormatado: 'R$ 129,90',
   descontoPercentual: 31,
   selo: 'Lote de alocação — 312 kits',
-  condicaoPagamento: 'até 12x no cartão · Pix com 5% de desconto',
+  condicaoPagamento: 'até 10x no cartão · Pix com 5% de desconto',
   envio: 'Frete grátis para todo o Brasil em até 5 dias úteis',
   incluso: [
     '3 sachês de Pó Compactador (400 g cada)',

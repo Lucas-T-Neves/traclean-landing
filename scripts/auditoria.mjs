@@ -96,6 +96,16 @@ if (/Pro Pet/.test(fs.readFileSync(RAIZ + 'public/index.html', 'utf8'))) problem
 if (/1 sachê = 1 ciclo/.test(ficcao)) problemas.push('contradicao: "1 sachê = 1 ciclo" vs reuso prometido');
 ok.push(`ficcao consistente: 3 ciclos de ~55 min por sache`);
 
+// 5b) a aritmetica da oferta: o parcelamento tem de fechar no preco
+const ofertaTxt = ler('src/models/oferta.js');
+const num = (campo) => Number(new RegExp(`^\\s*${campo}:\\s*([\\d.]+)`, 'm').exec(ofertaTxt)?.[1]);
+const preco = num('preco'), parcelas = num('parcelas'), valorParcela = num('valorParcela');
+if (parcelas && valorParcela && preco) {
+  const total = Number((valorParcela * parcelas).toFixed(2));
+  (total === preco ? ok : problemas).push(
+    `parcelamento ${parcelas}x de ${valorParcela} = ${total.toFixed(2)} ${total === preco ? 'fecha no preco' : 'NAO fecha no preco ' + preco}`);
+}
+
 // 6) README
 const readme = ler('README.md');
 for (const h of [/^# Traclean/m, /^## Integrantes/m, /^## Sobre o produto/m, /^## Jornada de construção/m,

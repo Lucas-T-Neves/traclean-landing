@@ -36,6 +36,9 @@ export function useOfertaViewModel() {
       descontoConfere: descontoReal === descontoPercentual,
       parcelasTexto: `${parcelas}x de ${formatarMoeda(valorParcela)} sem juros`,
       precoTotalParcelado: Number((valorParcela * parcelas).toFixed(2)),
+      // mesma politica do desconto: se o parcelamento nao fechar no preco, o
+      // problema e do model, e a auditoria (scripts/auditoria.mjs) acusa.
+      parcelamentoConfere: Number((valorParcela * parcelas).toFixed(2)) === preco,
     };
   }, []);
 

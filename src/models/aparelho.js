@@ -34,7 +34,7 @@ export const APARELHO = {
 
   energia: [
     { rotulo: 'Fonte', valor: 'Micro-reator de safira — o mesmo do Homem de Ferro, em escala de bolso' },
-    { rotulo: 'Autonomia', valor: '72 h de operacao continua' },
+    { rotulo: 'Autonomia', valor: 'Reator armazena 72 h; o limite real de uso é o pó: 3 ciclos de ~55 min por sachê' },
     { rotulo: 'Recarga', valor: 'Inducao solar: 4 h de sol direto' },
     { rotulo: 'Consumo', valor: '14 W em uso · 0,2 W em repouso' },
     { rotulo: 'Seguranca', valor: 'Trava termica: se a reacao passar de 6 min, aborta' },

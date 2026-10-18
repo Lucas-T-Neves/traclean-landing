@@ -17,7 +17,7 @@ export const BENEFICIOS = [
     icone: 'reator',
     titulo: 'Energia própria, sem tomada',
     texto:
-      'Micro-reator de safira, tecnologia Stark: 72 h de operação contínua. ' +
+      'Micro-reator de safira, tecnologia Stark: 72 h de energia armazenada. ' +
       'Nem cabo, nem tomada, nem bateria para trocar.',
   },
   {
