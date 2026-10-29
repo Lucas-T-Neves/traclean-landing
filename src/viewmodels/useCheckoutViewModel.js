@@ -15,8 +15,8 @@ const FORM_INICIAL = { nome: '', email: '', telefone: '', cidade: '', pet: false
 const REGRAS = {
   nome: (v) => (v.trim().length >= 3 ? '' : 'Escreva pelo menos 3 caracteres.'),
   email: (v) =>
-    /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(v.trim()) ? '' : 'E-mail invalido: use nome@dominio.com.',
-  telefone: (v) => (/^[\d\s()+.-]{8,20}$/.test(v.trim()) ? '' : 'Telefone invalido: so numeros, DDD e ().'),
+    /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(v.trim()) ? '' : 'E-mail inválido: use nome@domínio.com.',
+  telefone: (v) => (/^[\d\s()+.-]{8,20}$/.test(v.trim()) ? '' : 'Telefone inválido: só números, DDD e ().'),
   cidade: (v) => (v.trim().length >= 2 ? '' : 'Informe a cidade de entrega.'),
 };
 

@@ -45,7 +45,8 @@ export default function App() {
 
   return (
     <div className="app">
-      <a className="pular-para-conteudo" href="#mundo">
+      {/* leva ao inicio do conteudo (o H1), nao a uma secao do meio */}
+      <a className="pular-para-conteudo" href="#conteudo">
         Pular para o conteúdo
       </a>
 
@@ -55,11 +56,12 @@ export default function App() {
         menuAberto={navVM.menuAberto}
         irPara={acoesNav.irPara}
         alternarMenu={acoesNav.alternarMenu}
+        fecharMenu={acoesNav.fecharMenu}
         aoComprar={abrirCheckout}
         jaComprou={checkoutVM.jaComprou}
       />
 
-      <main>
+      <main id="conteudo" tabIndex={-1}>
         <Hero
           hero={d.hero}
           produto={d.produto}
@@ -128,6 +130,7 @@ export default function App() {
         check={checkoutVM.form.pet}
         checkRotulo={MODAL.check}
         pedido={checkoutVM.pedido}
+        tentouEnviar={checkoutVM.tentouEnviar}
       />
     </div>
   );

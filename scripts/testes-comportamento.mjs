@@ -121,9 +121,11 @@ await new Promise((r) => setTimeout(r, 120));
 checar('validacao bloqueou envio vazio', !modalTexto().includes('TRC-'));
 
 const valores = { nome: 'Ana Paula Souza', email: 'ana@exemplo.com', telefone: '(11) 98888-7777', cidade: 'Campinas' };
-qa('[role="dialog"] label input').forEach((el) => {
+qa('[role="dialog"] input').forEach((el) => {
   if (el.getAttribute('type') === 'checkbox') { el.dispatchEvent(new window.MouseEvent('click', { bubbles: true })); return; }
-  const label = el.closest('label').querySelector('span').textContent.toLowerCase();
+  // o rotulo agora e associado por htmlFor (o input nao fica dentro do label)
+  const rotuloEl = el.id ? doc.querySelector(`[role="dialog"] label[for="${el.id}"]`) : null;
+  const label = (rotuloEl || el.closest('label'))?.textContent.toLowerCase() || '';
   const chave = Object.keys(valores).find((k) => label.includes(k === 'nome' ? 'nome' : k === 'email' ? 'e-mail' : k === 'telefone' ? 'telefone' : 'cidade'));
   if (chave) {
     Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set.call(el, valores[chave]);

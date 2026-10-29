@@ -149,8 +149,7 @@ Contar só o que deu certo seria uma versão mentirosa do projeto.
 | **Nenhum outro modelo** | Todo o código deste repositório saiu do mesmo agente |
 
 #### Por que esse caminho
-
-O objetivo não era "gerar uma landing page" e pronto — a atividade pede que o README
+Cage" e pronto — a atividade pede que o README
 registre **decisões**. A IA funcionou melhor aqui como **par de programação e revisão**
 do que como geradora de texto criativo: produziu estrutura, achou erro e conferiu
 comportamento. As decisões de produto, de cenário e de copy foram minhas.
@@ -298,6 +297,20 @@ página renderizada. Código que compila não é código que funciona.
    do texto e dos 4 ícones.
 4. **Internacionalizar** os textos (hoje está tudo em português em `src/models`).
 5. **Medir contraste** com ferramenta automática, em vez de confiar no olho.
+
+### Atividade 02 — evolução com o MCP chrome-devtools
+
+Na Atividade 02 a página foi analisada e corrigida usando o MCP **chrome-devtools**
+(Chrome real): screenshots em 375/768/1440 px, Lighthouse mobile e desktop, árvore de
+acessibilidade, console/rede e testes de clique e teclado.
+
+Resultado: acessibilidade do Lighthouse subiu de **96 para 100** nos dois dispositivos
+(0 auditorias falhando). O modal passou a prender o foco e a isolar o fundo, os erros do
+formulário passaram a ser anunciados, o menu mobile fecha com `Esc` e o skip link leva ao
+início do conteúdo.
+
+O relato completo, com a tabela de problemas e as notas antes/depois, está em
+[`RELATO.md`](RELATO.md); as capturas e relatórios estão em [`evidencias/`](evidencias/).
 
 ---
 

@@ -19,7 +19,8 @@
   font-family: var(--display);
   font-size: 36px;
   font-weight: 700;
-  color: rgba(36, 55, 79, 0.1);
+  /* 0.6 de alfa garante contraste >= 3:1 (texto grande) sobre o branco */
+  color: rgba(36, 55, 79, 0.6);
   line-height: 1;
 }
 

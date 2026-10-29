@@ -34,7 +34,7 @@ export const BENEFICIOS = [
     icone: 'filtro',
     titulo: 'Filtro de sílica 9',
     texto:
-      'Retém 99,97% das partículas até 0,3 µm — a faixa da po de abóbada que ' +
+      'Retém 99,97% das partículas até 0,3 µm — a faixa do pó de abóbada que ' +
       'atravessa qualquer filtro comum.',
   },
   {

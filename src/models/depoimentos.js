@@ -17,7 +17,7 @@ export const DEPOIMENTOS = [
     nota: 5,
     titulo: 'Eu vi o Estalo. E vi o que veio depois.',
     texto:
-      'Quando metade do mundo sumiu, eu achei que a po ia embora junto. Veio a ' +
+      'Quando metade do mundo sumiu, eu achei que o pó ia embora junto. Veio a ' +
       'esquadra depois. Testei o sachê desconfiada e tenho um VC-9 na pia até hoje.',
   },
   {
@@ -37,7 +37,7 @@ export const DEPOIMENTOS = [
     nota: 4,
     titulo: 'O filtro de sílica 9 salvou minha asma',
     texto:
-      'Tenho alergia a po de impacto e nunca mais esperei saturar filtro. Só tiro uma ' +
+      'Tenho alergia a pó de impacto e nunca mais esperei saturar filtro. Só tiro uma ' +
       'estrela porque o kit de 3 sachês acaba rápido com dois cachorros.',
   },
   {
@@ -58,7 +58,7 @@ export const DEPOIMENTOS = [
     titulo: 'O traço na parede acende sozinho',
     texto:
       'Cabeça com LED de leitura de partícula é o detalhe que me vendeu: mostra ' +
-      'onde ainda tem po de abóbada. E as duas gatas sobreviveram ao Impacto, mas não à po.',
+      'onde ainda tem pó de abóbada. E as duas gatas sobreviveram ao Impacto, mas não ao pó.',
   },
   {
     id: 'd6',

@@ -1,36 +1,121 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import styles from '../../styles/Modal.module.css';
 import Botao from './Botao';
 
+// Elementos que podem receber foco dentro do dialogo.
+const FOCAVEIS =
+  'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
 /**
- * Modal acessivel: fecha com Esc, bloqueia scroll do fundo e
- * devolve o foco ao fechar. Nenhuma regra de negocio aqui.
+ * Modal acessivel: fecha com Esc, prende o foco dentro da caixa, isola o
+ * conteudo de tras (teclado e leitor de tela) e devolve o foco ao fechar.
+ * Nenhuma regra de negocio aqui.
  */
-export default function Modal({ aberto, aoFechar, aoConfirmar, aoAtualizarCampo, titulo, subtitulo, campos, form, erros, mostrarErro, check, checkRotulo, pedido }) {
+export default function Modal({
+  aberto,
+  aoFechar,
+  aoConfirmar,
+  aoAtualizarCampo,
+  titulo,
+  subtitulo,
+  campos,
+  form,
+  erros,
+  mostrarErro,
+  check,
+  checkRotulo,
+  pedido,
+  tentouEnviar,
+}) {
+  const caixaRef = useRef(null);
+  const fundoRef = useRef(null);
+  const focoAnterior = useRef(null);
+
   useEffect(() => {
     if (!aberto) return undefined;
+
+    focoAnterior.current = document.activeElement;
+
+    // Isola o resto da pagina: o fundo nao recebe foco nem e lido.
+    const fundo = fundoRef.current;
+    const irmaos = fundo?.parentElement
+      ? [...fundo.parentElement.children].filter((el) => el !== fundo)
+      : [];
+    irmaos.forEach((el) => {
+      el.inert = true;
+      el.setAttribute('aria-hidden', 'true');
+    });
+
+    // Move o foco para dentro do dialogo assim que ele abre.
+    caixaRef.current?.querySelector('input, button, a[href]')?.focus();
+
     function aoTeclar(e) {
-      if (e.key === 'Escape') aoFechar();
+      if (e.key === 'Escape') {
+        e.stopPropagation();
+        aoFechar();
+        return;
+      }
+      if (e.key !== 'Tab' || !caixaRef.current) return;
+
+      const itens = [...caixaRef.current.querySelectorAll(FOCAVEIS)].filter(
+        (el) => el.offsetParent !== null
+      );
+      if (!itens.length) return;
+
+      const primeiro = itens[0];
+      const ultimo = itens[itens.length - 1];
+      const ativo = document.activeElement;
+      const foraDaCaixa = !caixaRef.current.contains(ativo);
+
+      if (e.shiftKey && (ativo === primeiro || foraDaCaixa)) {
+        e.preventDefault();
+        ultimo.focus();
+      } else if (!e.shiftKey && (ativo === ultimo || foraDaCaixa)) {
+        e.preventDefault();
+        primeiro.focus();
+      }
     }
+
     document.addEventListener('keydown', aoTeclar);
     const overflowAnterior = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+
     return () => {
       document.removeEventListener('keydown', aoTeclar);
       document.body.style.overflow = overflowAnterior;
+      irmaos.forEach((el) => {
+        el.inert = false;
+        el.removeAttribute('aria-hidden');
+      });
+      if (focoAnterior.current && typeof focoAnterior.current.focus === 'function') {
+        focoAnterior.current.focus();
+      }
     };
   }, [aberto, aoFechar]);
+
+  // Depois de enviar, o formulario some: leva o foco ao titulo da confirmacao.
+  useEffect(() => {
+    if (!aberto || !pedido) return;
+    caixaRef.current?.querySelector('h3')?.focus();
+  }, [aberto, pedido]);
+
+  // Se a validacao falhou, leva o foco ao primeiro campo com erro.
+  useEffect(() => {
+    if (!aberto || !tentouEnviar || pedido) return;
+    caixaRef.current?.querySelector('[aria-invalid="true"]')?.focus();
+  }, [aberto, tentouEnviar, pedido]);
 
   if (!aberto) return null;
 
   return (
-    <div className={styles.fundo} onClick={aoFechar} role="presentation">
+    <div className={styles.fundo} onClick={aoFechar} role="presentation" ref={fundoRef}>
       <div
         className={styles.caixa}
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-titulo"
         onClick={(e) => e.stopPropagation()}
+        ref={caixaRef}
       >
         <button type="button" className={styles.fechar} onClick={aoFechar} aria-label="Fechar">
           <span aria-hidden="true">×</span>
@@ -39,7 +124,7 @@ export default function Modal({ aberto, aoFechar, aoConfirmar, aoAtualizarCampo,
         {pedido ? (
           <div className={styles.confirmacao}>
             <span className={styles.selo}>Pedido simulado</span>
-            <h3 className={styles.titulo} id="modal-titulo">
+            <h3 className={styles.titulo} id="modal-titulo" tabIndex={-1}>
               Pronto, {pedido.nome.split(' ')[0]}!
             </h3>
             <p className={styles.subtitulo}>{pedido.situacao}. Guarde o código abaixo como se fosse real:</p>
@@ -81,20 +166,34 @@ export default function Modal({ aberto, aoFechar, aoConfirmar, aoAtualizarCampo,
             <p className={styles.subtitulo}>{subtitulo}</p>
 
             <div className={styles.campos}>
-              {campos.map((c) => (
-                <label key={c.id} className={styles.campo}>
-                  <span className={styles.rotulo}>{c.rotulo}</span>
-                  <input
-                    className={`${styles.input} ${mostrarErro(c.id) ? styles.inputErro : ''}`}
-                    type={c.tipo}
-                    placeholder={c.placeholder}
-                    value={form[c.id]}
-                    onChange={(e) => aoAtualizarCampo(c.id, e.target.value)}
-                    aria-invalid={mostrarErro(c.id)}
-                  />
-                  {mostrarErro(c.id) && <span className={styles.erro}>{erros[c.id]}</span>}
-                </label>
-              ))}
+              {campos.map((c) => {
+                const idCampo = `campo-${c.id}`;
+                const idErro = `erro-${c.id}`;
+                const invalido = mostrarErro(c.id);
+                return (
+                  <div key={c.id} className={styles.campo}>
+                    {/* rotulo associado por htmlFor: o nome do campo nao engole a mensagem de erro */}
+                    <label className={styles.rotulo} htmlFor={idCampo}>{c.rotulo}</label>
+                    <input
+                      id={idCampo}
+                      name={c.id}
+                      className={`${styles.input} ${invalido ? styles.inputErro : ''}`}
+                      type={c.tipo}
+                      placeholder={c.placeholder}
+                      value={form[c.id]}
+                      onChange={(e) => aoAtualizarCampo(c.id, e.target.value)}
+                      aria-invalid={invalido}
+                      aria-required="true"
+                      aria-describedby={invalido ? idErro : undefined}
+                    />
+                    {invalido && (
+                      <span className={styles.erro} id={idErro} role="alert">
+                        {erros[c.id]}
+                      </span>
+                    )}
+                  </div>
+                );
+              })}
             </div>
 
             <label className={styles.check}>

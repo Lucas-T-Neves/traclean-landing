@@ -6,7 +6,7 @@
 
 export const OFERTA = {
   titulo: 'Kit Traclean 3 sachês',
-  subtitulo: '3 Po Compactadores · material para 3 aparelhos VC-9',
+  subtitulo: '3 Pós Compactadores · material para 3 aparelhos VC-9',
   preco: 1299,
   precoFormatado: 'R$ 1.299',
   de: 1890,
