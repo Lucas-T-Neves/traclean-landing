@@ -63,6 +63,11 @@ O MCP foi habilitado no `opencode.json` do workspace e abre um Chrome real local
 
 ## 2. Diagnóstico ("antes")
 
+**Origem das capturas:** as imagens "antes" foram refeitas a partir do build de produção
+gerado **antes** das correções (para permitir recortes limpos em 375 px); as "depois"
+vieram do servidor de desenvolvimento já corrigido. Os relatórios Lighthouse "antes"
+foram gerados no servidor de desenvolvimento antes das edições.
+
 - **Console:** nenhum erro/aviso da aplicação (só o aviso informativo do React DevTools).
 - **Rede:** 12 requisições, todas `200` (JS, CSS, fontes, imagem do gato, favicon).
 - **Layout medido em 375/768/1440:** sem rolagem horizontal; nenhum alvo de toque
