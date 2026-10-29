@@ -1,7 +1,7 @@
 # Traclean
 
 > *Pó. Água. Aparelho.*
-> Landing page de um produto fictício, criada como **Atividade 01** da disciplina.
+> Landing page de um produto fictício, criada na **Atividade 01** e evoluída na **Atividade 02** da disciplina.
 
 **Resumo:** depois do Impacto de Vharn, a Terra ficou coberta de pó que não sai.
 A Stark Industries criou o **Protocolo de Compactação
@@ -132,6 +132,7 @@ baixadas **localmente** — a apresentação funciona sem internet.
 | **OpenCode** | Agente de IA que escreveu boa parte do código com revisão guiada |
 | **Node.js 24 / npm 11** | Ambiente de execução e instalação |
 | **Edge headless** | Screenshot de conferência visual da página |
+| **MCP chrome-devtools** (Chrome real) | Análise da Atividade 02: screenshots, Lighthouse, árvore de acessibilidade e testes de teclado |
 | **jsdom** | Teste automatizado de comportamento (52 verificações) |
 | **Geração de imagem** | **Nenhuma.** As ilustrações são SVG escritos em código, com ajuda de IA (abaixo) |
 | **Wikimedia Commons API** | Download da única foto usada, com a licença conferida |
@@ -143,13 +144,14 @@ Contar só o que deu certo seria uma versão mentirosa do projeto.
 
 #### Modelos e agentes
 
-| Modelo | Onde foi usado |
+| Modelo / agente | Onde foi usado |
 |---|---|
-| **Space Bunny Free** (via OpenCode, em terminal) | Implementação assistida, escrita do README e testes de verificação |
-| **Nenhum outro modelo** | Todo o código deste repositório saiu do mesmo agente |
+| **Space Bunny Free** (via OpenCode, em terminal) | Implementação assistida da Atividade 01, escrita do README da Atividade 01 e testes de verificação |
+| **Big Pickle** (via OpenCode, com MCP chrome-devtools) | Análise, correções de acessibilidade, revisão do README e escrita do relato da Atividade 02 |
 
 #### Por que esse caminho
-Cage" e pronto — a atividade pede que o README
+
+Não se tratava de pedir "faça a página" e pronto — a atividade pede que o README
 registre **decisões**. A IA funcionou melhor aqui como **par de programação e revisão**
 do que como geradora de texto criativo: produziu estrutura, achou erro e conferiu
 comportamento. As decisões de produto, de cenário e de copy foram minhas.
@@ -276,7 +278,7 @@ não credita ninguém nominalmente por essa foto.
 
 **Como avaliei**
 
-O build de produção fecha em **~60 kB de JavaScript + 6 kB de CSS** (gzip), sem
+O build de produção fecha em **~61 kB de JavaScript + ~7 kB de CSS** (gzip), sem
 dependências além do React. O teste automatizado roda **52 verificações** — render das
 seções, contagem de itens, preço e desconto, acordeão, modal, validação **bloqueando** o
 envio vazio, confirmação gerando código de pedido, CTA trocando de estado e uma camada
@@ -296,11 +298,13 @@ página renderizada. Código que compila não é código que funciona.
 3. **Um diagrama da reação** (do pó ao aparelho) em etapas ilustradas, em vez de depender
    do texto e dos 4 ícones.
 4. **Internacionalizar** os textos (hoje está tudo em português em `src/models`).
-5. **Medir contraste** com ferramenta automática, em vez de confiar no olho.
+5. **Medir contraste** com ferramenta automática — **feito na Atividade 02** com o
+   Lighthouse (acessibilidade 96 → 100); falta integrar uma checagem de página inteira
+   ao `npm run auditar` (hoje ele só valida pares de cor).
 
 ### Atividade 02 — evolução com o MCP chrome-devtools
 
-Na Atividade 02 a página foi analisada e corrigida usando o MCP **chrome-devtools**
+Na Atividade 02, analisei e corrigi a página com o MCP **chrome-devtools**
 (Chrome real): screenshots em 375/768/1440 px, Lighthouse mobile e desktop, árvore de
 acessibilidade, console/rede e testes de clique e teclado.
 

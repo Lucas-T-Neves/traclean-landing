@@ -21,8 +21,8 @@ correção. As capturas e relatórios completos estão em `antes/` e `depois/`.
 | 1 | `new_page("http://localhost:3000/")` | Página aberta; título "Traclean · 400 g de pó em 2 L de água viram um aspirador" |
 | 2 | `emulate("375x812,mobile,touch")`, `emulate("768x1024")`, `emulate("1440x900")` + `take_screenshot` | Capturas salvas em `evidencias/antes/antes-375.png`, `-768.png` e `-1440.png` |
 | 3 | `list_console_messages` | Nenhum erro/aviso da aplicação (apenas o `info` do React DevTools) |
-| 4 | `list_network_requests` | 12 requisições, todas `200` (JS, CSS, 6 fontes, imagem, favicon) |
-| 5 | `lighthouse_audit(mobile)` | Acessibilidade **96**; falha `color-contrast`: 4 nós (números `01`–`04`) com **1,19:1** (`#e9ebed` sobre branco) |
+| 4 | `list_network_requests` | 12 requisições: 11 com `200` e o favicon repetido com `304` (cache) |
+| 5 | `lighthouse_audit(mobile)` | Acessibilidade **96**; falha `color-contrast`: 4 elementos (números `01`–`04`) com **1,19:1** (`#e9ebed` sobre branco) |
 | 6 | `lighthouse_audit(desktop)` | Acessibilidade **96**; mesma falha de contraste |
 | 7 | `take_snapshot` | Árvore de acessibilidade: `dialog` com `aria-modal`, FAQ com `aria-expanded`, labels dos campos |
 | 8 | `evaluate_script` (375) | `innerWidth=375`, `scrollWidth=375` (sem overflow); nenhum alvo de toque < 24 px; menu mobile presente |

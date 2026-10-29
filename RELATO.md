@@ -5,21 +5,22 @@
 > **Repositório público:** <https://github.com/Lucas-T-Neves/traclean-landing>
 >
 > **Integrante:** Lucas T. Neves
-> Este relato descreve como a página foi analisada e corrigida com o MCP
+> **Evidências:** [capturas e relatórios](evidencias/) · [log das interações](evidencias/mcp-interacoes.md)
+> Este relato descreve como analisei e corrigi a página com o MCP
 > **chrome-devtools**, com as evidências em `evidencias/antes/` e `evidencias/depois/`.
 
 ---
 
 ## 1. Qual MCP foi usado e por quê
 
-Usamos o **chrome-devtools**, que controla um Chrome real via DevTools Protocol.
+Usei o **chrome-devtools**, que controla um Chrome real via DevTools Protocol.
 Ele foi escolhido porque a atividade pede problemas **observados**, não deduzidos do
 código: o MCP permite abrir a página, emular larguras de celular/tablet/desktop, tirar
 screenshots, ler a árvore de acessibilidade, rodar Lighthouse, ver console/rede e
 executar cliques e teclas de verdade.
 
-Não usamos nenhuma ferramenta de auditoria "de papel": todas as notas e falhas citadas
-abaixo vieram de execuções registradas em `evidencias/`.
+Não usei nenhuma ferramenta de auditoria "de papel" para o diagnóstico: as notas e
+falhas citadas abaixo vieram de execuções registradas em `evidencias/`.
 
 ### Ferramentas do MCP chamadas
 
@@ -31,7 +32,7 @@ abaixo vieram de execuções registradas em `evidencias/`.
 | `take_screenshot` | capturas de página inteira e recortes de viewport |
 | `take_snapshot` | árvore de acessibilidade (nomes, papéis, estados `expanded`/`invalid`) |
 | `list_console_messages` | erros e avisos do console |
-| `list_network_requests` | conferir se imagens/fontes/css/js carregavam (todos 200) |
+| `list_network_requests` | conferir se imagens/fontes/css/js carregavam (11 respostas 200 e 1 favicon 304 de cache) |
 | `lighthouse_audit` | auditoria de acessibilidade, boas práticas e SEO em mobile e desktop |
 | `click`, `press_key`, `fill_form` | testar menu, FAQ, teclado, validação e checkout |
 | `evaluate_script` | medir overflow horizontal, alvos de toque, foco, estilos computados e conteúdo |
@@ -52,9 +53,9 @@ O MCP foi habilitado no `opencode.json` do workspace e abre um Chrome real local
 }
 ```
 
-> **Nota metodológica:** na primeira tentativa usamos `resize_page` com 375 px, mas o
+> **Nota metodológica:** na primeira tentativa usei `resize_page` com 375 px, mas o
 > Chrome desta máquina limita a janela a ~500 px (o `innerWidth` medido foi 500).
-> Refizemos as capturas com `emulate` e confirmamos `innerWidth = 375`.
+> Refiz as capturas com `emulate` e confirmei `innerWidth = 375`.
 > A página de 375 px tem ~18.200 px de altura, acima do limite de captura de 16.384 px
 > do navegador; por isso o "antes" e o "depois" em 375 px têm também recortes de
 > viewport (`*-topo`, `*-meio`, `*-fim`).
@@ -69,12 +70,12 @@ vieram do servidor de desenvolvimento já corrigido. Os relatórios Lighthouse "
 foram gerados no servidor de desenvolvimento antes das edições.
 
 - **Console:** nenhum erro/aviso da aplicação (só o aviso informativo do React DevTools).
-- **Rede:** 12 requisições, todas `200` (JS, CSS, fontes, imagem do gato, favicon).
+- **Rede:** 12 requisições: 11 com `200` e o favicon repetido com `304` (cache).
 - **Layout medido em 375/768/1440:** sem rolagem horizontal; nenhum alvo de toque
   menor que 24 px.
 - **Lighthouse mobile e desktop:** Acessibilidade **96**, Boas práticas **100**, SEO
   **100**, Agentic Browsing **100**. Uma auditoria falhou nos dois modos:
-  `color-contrast`, em 4 nós (os números `01`–`04` da seção "Como funciona", com
+  `color-contrast`, em 4 elementos (os números `01`–`04` da seção "Como funciona", com
   **1,19:1** — `#e9ebed` sobre branco).
 
 ### Problemas encontrados, em ordem de prioridade
@@ -117,7 +118,7 @@ nenhuma mudança de identidade visual.
 | Lighthouse — Acessibilidade (mobile) | 96 | **100** |
 | Lighthouse — Acessibilidade (desktop) | 96 | **100** |
 | Lighthouse — Boas práticas / SEO / Agentic | 100 / 100 / 100 | 100 / 100 / 100 |
-| Auditorias de acessibilidade falhando | 1 (`color-contrast`, 4 nós) | **0** |
+| Auditorias de acessibilidade falhando | 1 (`color-contrast`, 4 elementos) | **0** |
 | Erros/avisos no console | 0 (só info do DevTools) | 0 |
 | Rolagem horizontal em 375/768/1440 | nenhuma | nenhuma |
 | Alvos de toque < 24 px | nenhum | nenhum |
@@ -172,6 +173,15 @@ Testes de interação repetidos no navegador real:
 - A captura de página inteira em 375 px esbarra no limite de 16.384 px do navegador —
   foi necessário complementar com recortes de viewport.
 
+As chamadas usadas foram `new_page`, `navigate_page`, `emulate`, `resize_page`,
+`take_screenshot`, `take_snapshot`, `list_console_messages`, `list_network_requests`,
+`lighthouse_audit`, `click`, `press_key`, `fill_form`, `evaluate_script` e `close_page`.
+
+> **Em uma frase:** o MCP achou problemas que o `npm run auditar` (que checa contraste
+> só por cálculo de cores) e os testes em jsdom não pegavam, como o skip link fora da
+> tela e o foco escapando do modal. Por outro lado, ele não decide a correção: a escolha
+> de como resolver continuou sendo minha.
+
 Conclusão: o MCP foi decisivo para **provar** os problemas e para medir o resultado,
 mas as correções continuaram sendo trabalho de código pequeno e revisado. O ganho maior
 não foi "gerar a página", e sim **ver a página como o usuário e o leitor de tela a veem**.
@@ -211,7 +221,7 @@ de IA durante a sessão; os artefatos gerados por ele ficam em `evidencias/`.
 ## 7. Arquivos de evidência
 
 ### Registro da sessão
-- `mcp-interacoes.md` — log cronológico das chamadas ao MCP (antes e depois)
+- [mcp-interacoes.md](evidencias/mcp-interacoes.md) — log cronológico das chamadas ao MCP (antes e depois)
 
 ### Antes (`evidencias/antes/`)
 - `antes-1440.png` — página inteira em 1440 px
@@ -242,5 +252,5 @@ src/views/components/Modal.js
 scripts/testes-comportamento.mjs
 ```
 
-Nenhuma dependência foi adicionada. O build de produção continua em ~62 kB de JS e
+Nenhuma dependência foi adicionada. O build de produção continua em ~61 kB de JS e
 ~7 kB de CSS (gzip).
