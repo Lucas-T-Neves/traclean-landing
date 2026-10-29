@@ -88,7 +88,10 @@ dl {
 }
 
 .app {
-  overflow-x: hidden;
+  /* clip esconde o overflow horizontal (brilho do hero) SEM criar um scroll
+     container — ao contrario de hidden, que quebrava o position:sticky do
+     cabecalho (medido: top negativo no scroll). */
+  overflow-x: clip;
 }
 
 /* acessibilidade: foco visivel e link de escape */
